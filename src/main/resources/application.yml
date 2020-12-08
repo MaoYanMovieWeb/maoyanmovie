@@ -7,3 +7,6 @@ spring:
 mybatis:
   mapper-locations: mapper/*.xml
   type-aliases-package: com.hut.maoyanmovie.bean
+
+
+/啊啊啊啊啊啊啊啊啊啊啊
