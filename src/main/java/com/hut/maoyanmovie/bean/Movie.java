@@ -7,7 +7,8 @@ package com.hut.maoyanmovie.bean;
 
 public class Movie {
 
-    private Integer movie_id;
+    private Integer mid;
+    private String movie_name;
     private String movie_time;
     private String movie_type;
     private String movie_information;
@@ -20,10 +21,11 @@ public class Movie {
         super();
     }
 
-    public Movie(Integer movie_id, String movie_time, String movie_type,
-                 String movie_information, String movie_region,
+    public Movie(Integer mid, String movie_name, String movie_time,
+                 String movie_type, String movie_information, String movie_region,
                  String movie_photo, String movie_score, String movie_money) {
-        this.movie_id = movie_id;
+        this.mid = mid;
+        this.movie_name = movie_name;
         this.movie_time = movie_time;
         this.movie_type = movie_type;
         this.movie_information = movie_information;
@@ -33,12 +35,20 @@ public class Movie {
         this.movie_money = movie_money;
     }
 
-    public Integer getMovie_id() {
-        return movie_id;
+    public Integer getMid() {
+        return mid;
     }
 
-    public void setMovie_id(Integer movie_id) {
-        this.movie_id = movie_id;
+    public void setMid(Integer mid) {
+        this.mid = mid;
+    }
+
+    public String getMovie_name() {
+        return movie_name;
+    }
+
+    public void setMovie_name(String movie_name) {
+        this.movie_name = movie_name;
     }
 
     public String getMovie_time() {
@@ -100,7 +110,8 @@ public class Movie {
     @Override
     public String toString() {
         return "Movie{" +
-                "movie_id=" + movie_id +
+                "mid=" + mid +
+                ", movie_name='" + movie_name + '\'' +
                 ", movie_time='" + movie_time + '\'' +
                 ", movie_type='" + movie_type + '\'' +
                 ", movie_information='" + movie_information + '\'' +
