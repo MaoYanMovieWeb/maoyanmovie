@@ -15,11 +15,26 @@ import java.util.List;
 
 @Service
 public class OrdersServiceImpl implements OrdersService {
-    @Autowired
-    private OrdersMapper ordersMapper;
+   @Autowired(required = false)
+   private OrdersMapper ordersMapper;
 
     @Override
     public List<Orders> getOrdersByOid(Integer oid) {
         return ordersMapper.getOrdersByOid(oid);
+    }
+
+    @Override
+    public void editOrdersByOid(Orders order) {
+        ordersMapper.editOrdersByOid(order);
+    }
+
+    @Override
+    public void delOrdersByOid(Integer oid) {
+        ordersMapper.delOrdersByOid(oid);
+    }
+
+    @Override
+    public void insertOrdersByOid(Orders order) {
+        ordersMapper.insertOrdersByOid(order);
     }
 }

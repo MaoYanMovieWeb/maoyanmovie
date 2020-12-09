@@ -7,7 +7,7 @@ package com.hut.maoyanmovie.bean;
  * 订单实体类
  */
 
-public class Orders {
+public class Orders implements java.io.Serializable{
     private Integer oid;
     private Integer uid;
     private Integer mid;

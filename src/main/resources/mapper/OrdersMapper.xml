@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hut.maoyanmovie.dao.OrdersMapper">
 
-    <resultMap type="com.hut.maoyanmovie.dao.OrdersMapper" id="OrdersMapper">
+    <resultMap type="com.hut.maoyanmovie.bean.Orders" id="OrdersMapper">
         <id property="oid" column="oid"/>
         <result property="uid" column="uid"/>
         <result property="mid" column="mid"/>
@@ -20,8 +20,25 @@
             oid=#{oid}
     </select>
 
+    <update id="editOrdersByOid">
+        UPDATE	orders
+        SET
+            uid=#{uid},
+            mid=#{mid},
+            order_time=#{order_time}
+        WHERE
+            oid=#{oid};
+    </update>
 
+    <delete id="delOrdersByOid">
+        DELETE FROM orders WHERE oid=#{oid}
+    </delete>
 
+    <insert id="insertOrdersByOid">
+        INSERT INTO orders
+        ( oid,uid,mid,order_time) VALUES
+        ( #{oid},#{uid},#{mid},#{order_time})
+    </insert>
 
 
 

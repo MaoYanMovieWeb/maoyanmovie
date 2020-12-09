@@ -12,4 +12,10 @@ public interface OrdersService {
 
     List<Orders> getOrdersByOid(Integer oid);
 
+    void editOrdersByOid(Orders order);
+
+    void delOrdersByOid(Integer oid);
+
+    void insertOrdersByOid(Orders order);
+
 }
