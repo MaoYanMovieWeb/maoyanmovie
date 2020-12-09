@@ -12,8 +12,15 @@ import java.util.List;
  */
 
 @Mapper
-@Repository
+
 public interface OrdersMapper {
-    List<Orders> getOrdersByOid(Integer oid);
+
+    List<Orders> getOrdersByOid(Integer oid);   //查询订单
+
+    void editOrdersByOid();                 //修改订单
+
+    void delOrdersByOid();              //删除订单
+
+    void insertOrdersByOid();               //添加订单
 
 }
