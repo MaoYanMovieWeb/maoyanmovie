@@ -1,7 +1,10 @@
 package com.hut.maoyanmovie.dao;
 
+import com.hut.maoyanmovie.bean.Orders;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @author Cleanmoo
@@ -11,4 +14,6 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface OrdersMapper {
+    List<Orders> getOrdersByOid(Integer oid);
+
 }
