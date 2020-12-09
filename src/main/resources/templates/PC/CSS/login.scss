@@ -1,0 +1,106 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.login-con {
+    width: 870px;
+    margin: 0 auto;
+    input {
+        outline: none;
+    }
+    input:focus {
+        outline: none;
+    }
+    >.login-header {
+        margin-bottom: 20px;
+    }
+    >.login-main {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        // >.main-pic {}
+        >.main-input {
+            margin-top: 50px;
+            form {
+                width: 275px;
+                >.head {
+                    >p {
+                        height: 20px;
+                        font-size: 12px;
+                        color: #666666;
+                        span:nth-of-type(1) {
+                            float: left;
+                        }
+                        span:nth-of-type(2) {
+                            float: right;
+                            >span {
+                                float: right;
+                                width: 15px;
+                                height: 15px;
+                                background-image: url(../../pc图片/img/sprite_webpage.png);
+                                background-repeat: no-repeat;
+                                background-position-x: -13px;
+                                background-position-y: -58px;
+                            }
+                        }
+                    }
+                }
+                >.info {
+                    >input {
+                        background-repeat: no-repeat;
+                        background-position: 3px 9px;
+                        color: #a9a9a9;
+                        width: 270px;
+                        height: 34px;
+                        border: 1px solid #666666;
+                        margin-top: 15px;
+                    }
+                    >.user {
+                        background-image: url(../../pc图片/img/login_icon01.png);
+                    }
+                    >.password {
+                        background-image: url(../../pc图片/img/login_icon02.png);
+                    }
+                }
+                >.choose {
+                    margin-top: 10px;
+                    >p {
+                        float: right;
+                        color: #ec454a;
+                    }
+                }
+                >.submit {
+                    >input {
+                        background-color: #e63237;
+                        border: none;
+                        height: 34px;
+                        width: 270px;
+                        color: #ffffff;
+                        margin-top: 20px;
+                        outline: none;
+                    }
+                }
+                >.tail {
+                    >p {
+                        color: #666666;
+                        >span {
+                            color: #ec454a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    >.login-footer {
+        text-align: center;
+        color: #cccccc;
+        font-size: 12px;
+    }
+}

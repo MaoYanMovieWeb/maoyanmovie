@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/maoyanmovie?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/maoyanmovie?useSSL=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
     password: root
 

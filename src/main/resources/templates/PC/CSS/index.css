@@ -1,0 +1,517 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.container {
+  margin: 0 auto;
+  width: 1210px; }
+
+.header {
+  height: 80px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8d8d8;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 300; }
+  .header > .container {
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; }
+    .header > .container .logo {
+      height: 40px;
+      display: inline-block;
+      width: 133px; }
+    .header > .container .position {
+      display: inline-block;
+      margin-left: 20px;
+      position: relative; }
+      .header > .container .position > p {
+        display: inline-block; }
+      .header > .container .position > .trian {
+        width: 10px;
+        height: 5px;
+        background-image: url(../../pc图片/img/sprite_webpage.png);
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: -63px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 7px; }
+      .header > .container .position > .city {
+        width: 400px;
+        height: 300px;
+        background-color: #ffffff;
+        display: none;
+        position: absolute;
+        top: 20px;
+        overflow-y: scroll; }
+        .header > .container .position > .city > .at {
+          border-bottom: 1px solid gray; }
+        .header > .container .position > .city > .other > div {
+          display: flex;
+          flex-wrap: wrap; }
+          .header > .container .position > .city > .other > div > p {
+            margin-right: 30px; }
+    .header > .container .position:hover > .city {
+      display: block; }
+    .header > .container .nav {
+      width: 320px;
+      margin-left: 70px;
+      height: 80px; }
+      .header > .container .nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 320px; }
+        .header > .container .nav ul li {
+          list-style: none;
+          text-align: center;
+          width: 80px;
+          line-height: 80px; }
+          .header > .container .nav ul li a {
+            width: 80px;
+            height: 80px;
+            display: block;
+            color: #000000;
+            background-color: #ffffff; }
+          .header > .container .nav ul li a:hover {
+            color: #ef4238;
+            cursor: pointer; }
+        .header > .container .nav ul li:first-of-type > a {
+          background-color: #ef4238;
+          color: #ffffff; }
+    .header > .container .search {
+      float: right;
+      width: 260px;
+      position: relative;
+      margin-left: 270px; }
+      .header > .container .search input:first-of-type {
+        width: 220px;
+        height: 38px;
+        padding: 0 40px 0 20px;
+        display: inline-block;
+        border: 1px solid #cccccc;
+        background-color: #faf8fa;
+        border-radius: 30px;
+        color: #8f8e8f;
+        outline: none; }
+      .header > .container .search input:last-of-type {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 242px;
+        top: 0;
+        border-radius: 30px;
+        border: none;
+        background-image: url(../../pc图片/img/sprite_webpage.png);
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        background-position-y: -0px;
+        outline: none; }
+    .header > .container .user {
+      width: 56px;
+      height: 80px;
+      margin-left: 40px;
+      position: relative; }
+      .header > .container .user img {
+        width: 40px;
+        height: 40px;
+        margin-top: 20px; }
+      .header > .container .user > .trian {
+        width: 10px;
+        height: 5px;
+        background-image: url(../../pc图片/img/sprite_webpage.png);
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: -63px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 7px; }
+      .header > .container .user > .login {
+        background-color: #ffffff;
+        display: none;
+        position: absolute;
+        width: 40px;
+        height: 50px;
+        top: 70px;
+        line-height: 50px;
+        text-align: center; }
+    .header > .container .user:hover > .login {
+      display: block; }
+
+.empty {
+  height: 80px; }
+
+.picture {
+  width: 1600px;
+  height: 496px;
+  margin: 0 auto;
+  position: relative; }
+  .picture .slider {
+    position: absolute;
+    width: 1110px;
+    background-color: #ffffff;
+    height: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 375px;
+    display: flex;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); }
+    .picture .slider .slider-box {
+      display: flex;
+      justify-content: space-between;
+      width: 990px;
+      align-items: center; }
+      .picture .slider .slider-box > img {
+        width: 160px;
+        height: 108px; }
+    .picture .slider .slider-butt {
+      display: inline-block;
+      position: relative;
+      height: 120px;
+      width: 60px; }
+      .picture .slider .slider-butt > img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+
+.main {
+  margin: 70px auto; }
+  .main > .container {
+    display: flex;
+    justify-content: space-between; }
+    .main > .container .main-left {
+      width: 740px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 2020px; }
+      .main > .container .main-left .playing {
+        width: 740px; }
+        .main > .container .main-left .playing img {
+          width: 160px;
+          height: 220px; }
+        .main > .container .main-left .playing > .top {
+          width: 740px;
+          position: relative; }
+          .main > .container .main-left .playing > .top > p {
+            font-size: 24px;
+            color: #ef4238;
+            display: inline-block; }
+          .main > .container .main-left .playing > .top > a {
+            color: #ef4238;
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            right: 0; }
+        .main > .container .main-left .playing > .pic {
+          width: 740px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap; }
+          .main > .container .main-left .playing > .pic > .pic-box {
+            width: 160px;
+            height: 260px;
+            border: 1px solid #efefef;
+            margin: 18px 0; }
+            .main > .container .main-left .playing > .pic > .pic-box > div {
+              color: #ef595d;
+              font-size: 12px;
+              text-align: center;
+              letter-spacing: 3px;
+              line-height: 40px;
+              height: 40px; }
+      .main > .container .main-left .next {
+        width: 740px; }
+        .main > .container .main-left .next img {
+          width: 160px;
+          height: 220px; }
+        .main > .container .main-left .next > .top {
+          width: 740px;
+          position: relative; }
+          .main > .container .main-left .next > .top > p {
+            font-size: 24px;
+            color: #2d98f3;
+            display: inline-block; }
+          .main > .container .main-left .next > .top > a {
+            color: #2d98f3;
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            right: 0; }
+        .main > .container .main-left .next > .pic {
+          width: 740px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap; }
+          .main > .container .main-left .next > .pic > .pic-box {
+            width: 160px;
+            height: 333px;
+            margin: 18px 0; }
+            .main > .container .main-left .next > .pic > .pic-box .box-main {
+              height: 293px;
+              border: 1px solid #efefef; }
+              .main > .container .main-left .next > .pic > .pic-box .box-main .want {
+                color: #feb61f;
+                text-align: left;
+                height: 33px;
+                padding-left: 5px;
+                line-height: 33px;
+                background-color: #fbfbfb; }
+              .main > .container .main-left .next > .pic > .pic-box .box-main .main-bott {
+                display: flex;
+                text-align: center;
+                height: 40px;
+                line-height: 40px; }
+                .main > .container .main-left .next > .pic > .pic-box .box-main .main-bott .bott-left {
+                  color: #999999;
+                  border-right: 1px dotted #e5e5e5;
+                  width: 80px; }
+                .main > .container .main-left .next > .pic > .pic-box .box-main .main-bott .bott-right {
+                  color: #2d98f3;
+                  width: 80px; }
+            .main > .container .main-left .next > .pic > .pic-box .box-bott {
+              color: #999999;
+              text-align: center;
+              height: 40px;
+              line-height: 40px; }
+      .main > .container .main-left .hot {
+        width: 740px; }
+        .main > .container .main-left .hot img {
+          width: 160px;
+          height: 220px; }
+        .main > .container .main-left .hot > .top {
+          position: relative; }
+          .main > .container .main-left .hot > .top > p {
+            color: #ef4238;
+            font-size: 25px;
+            display: inline-block; }
+          .main > .container .main-left .hot > .top > div {
+            display: inline-block;
+            width: 220px;
+            margin-left: 10px; }
+            .main > .container .main-left .hot > .top > div > ul {
+              display: flex;
+              justify-content: space-between; }
+              .main > .container .main-left .hot > .top > div > ul li {
+                list-style: none; }
+          .main > .container .main-left .hot > .top > a {
+            color: #ef4238;
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            right: 0; }
+        .main > .container .main-left .hot > .pic {
+          width: 740px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap; }
+          .main > .container .main-left .hot > .pic > .pic-box {
+            width: 160px;
+            height: 220px;
+            margin: 18px 0; }
+          .main > .container .main-left .hot > .pic > .pic-box:first-of-type {
+            width: 351px;
+            height: 220px; }
+            .main > .container .main-left .hot > .pic > .pic-box:first-of-type > img {
+              width: 351px;
+              height: 220px; }
+    .main > .container .main-right {
+      width: 360px;
+      display: flex;
+      height: 2020px;
+      justify-content: space-between;
+      flex-direction: column; }
+      .main > .container .main-right .box-office {
+        height: 600px; }
+        .main > .container .main-right .box-office > p {
+          font-size: 24px;
+          color: #ef4238; }
+        .main > .container .main-right .box-office > .first {
+          width: 358px;
+          height: 78px;
+          border: 1px solid #efefef;
+          margin-top: 18px;
+          display: flex;
+          justify-content: space-between; }
+          .main > .container .main-right .box-office > .first > .first-right {
+            height: 78px;
+            width: 232px; }
+            .main > .container .main-right .box-office > .first > .first-right > div > p {
+              line-height: 36px; }
+            .main > .container .main-right .box-office > .first > .first-right > div > p:last-of-type {
+              font-size: 12px;
+              color: #ef4238; }
+        .main > .container .main-right .box-office > .others > ul li {
+          list-style: none;
+          margin: 10px 0; }
+          .main > .container .main-right .box-office > .others > ul li > span {
+            font-size: 14px; }
+            .main > .container .main-right .box-office > .others > ul li > span > i {
+              color: #999999; }
+            .main > .container .main-right .box-office > .others > ul li > span > span:nth-of-type(2) {
+              float: right;
+              color: #ef4238;
+              font-size: 12px;
+              line-height: 21px; }
+        .main > .container .main-right .box-office .more {
+          height: 100px;
+          width: 358px;
+          border: 1px solid #efefef;
+          margin-top: 40px;
+          position: relative; }
+          .main > .container .main-right .box-office .more .today {
+            background-color: #ef4238;
+            color: #ffffff;
+            width: 40px;
+            height: 100px;
+            display: inline-block; }
+            .main > .container .main-right .box-office .more .today > p {
+              margin: 0 5px;
+              text-align: center;
+              line-height: 25px; }
+          .main > .container .main-right .box-office .more .more-main {
+            display: inline-block;
+            position: absolute;
+            top: 30px;
+            width: 280px;
+            margin-left: 15px; }
+            .main > .container .main-right .box-office .more .more-main .num {
+              margin-bottom: 10px; }
+              .main > .container .main-right .box-office .more .more-main .num > p {
+                font-size: 12px;
+                color: #ef4238;
+                height: 26px; }
+                .main > .container .main-right .box-office .more .more-main .num > p > span:first-of-type {
+                  font-size: 20px;
+                  font-weight: 600; }
+                .main > .container .main-right .box-office .more .more-main .num > p > span:last-of-type {
+                  float: right;
+                  line-height: 26.4px; }
+            .main > .container .main-right .box-office .more .more-main .time {
+              color: #99999c;
+              font-size: 12px;
+              margin-bottom: 5px; }
+      .main > .container .main-right .hope {
+        width: 360px; }
+        .main > .container .main-right .hope > p {
+          font-size: 24px;
+          color: #ffb400; }
+          .main > .container .main-right .hope > p > span {
+            float: right;
+            font-size: 12px;
+            line-height: 32px; }
+        .main > .container .main-right .hope .first {
+          width: 358px;
+          border: 1px solid #efefef;
+          margin-top: 20px; }
+          .main > .container .main-right .hope .first > .right {
+            display: inline-block;
+            position: relative;
+            height: 195px;
+            width: 215px; }
+            .main > .container .main-right .hope .first > .right .right-main {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 5px; }
+              .main > .container .main-right .hope .first > .right .right-main p {
+                font-size: 12px;
+                margin: 8px 0; }
+              .main > .container .main-right .hope .first > .right .right-main p:first-of-type {
+                font-size: 16px; }
+              .main > .container .main-right .hope .first > .right .right-main p:last-of-type {
+                color: #ffc487; }
+        .main > .container .main-right .hope > .next {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px; }
+          .main > .container .main-right .hope > .next > div {
+            display: inline-block;
+            height: 183px;
+            border: 1px solid #efefef; }
+            .main > .container .main-right .hope > .next > div > p {
+              margin-left: 10px;
+              line-height: 28px; }
+            .main > .container .main-right .hope > .next > div > p:last-of-type {
+              font-size: 12px;
+              color: #ffc487; }
+        .main > .container .main-right .hope > .others > ul > li {
+          list-style: none;
+          margin: 10px 0; }
+          .main > .container .main-right .hope > .others > ul > li > span > i {
+            color: #999999; }
+          .main > .container .main-right .hope > .others > ul > li > span > span:nth-of-type(2) {
+            float: right;
+            color: #ffc487;
+            font-size: 12px;
+            line-height: 21px; }
+      .main > .container .main-right .best {
+        width: 360px; }
+        .main > .container .main-right .best > p {
+          font-size: 24px;
+          color: #ffb400; }
+          .main > .container .main-right .best > p > span {
+            float: right;
+            font-size: 12px;
+            line-height: 32px; }
+        .main > .container .main-right .best > .first {
+          width: 358px;
+          height: 78px;
+          border: 1px solid #efefef;
+          margin-top: 18px; }
+          .main > .container .main-right .best > .first > .first-right {
+            display: inline-block;
+            position: relative;
+            height: 78px;
+            width: 232px; }
+            .main > .container .main-right .best > .first > .first-right > .right-main {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 5px; }
+              .main > .container .main-right .best > .first > .first-right > .right-main > p {
+                font-size: 12px;
+                margin: 8px 0; }
+              .main > .container .main-right .best > .first > .first-right > .right-main > p:last-of-type {
+                font-size: 12px;
+                color: #ef4238; }
+              .main > .container .main-right .best > .first > .first-right > .right-main > p:first-of-type {
+                font-size: 16px; }
+              .main > .container .main-right .best > .first > .first-right > .right-main > p:last-of-type {
+                color: #ffc487; }
+        .main > .container .main-right .best > .others > ul > li {
+          list-style: none;
+          margin: 10px 0; }
+          .main > .container .main-right .best > .others > ul > li > span > i {
+            color: #999999; }
+          .main > .container .main-right .best > .others > ul > li > span > span:nth-of-type(2) {
+            float: right;
+            color: #ffc487;
+            font-size: 12px;
+            line-height: 21px; }
+
+.footer {
+  background-color: #262426;
+  padding: 55px 0; }
+  .footer .container > p {
+    text-align: center;
+    color: #666666; }
+
+.cat {
+  position: fixed;
+  right: 0;
+  bottom: 40px; }
+
+/*# sourceMappingURL=index.css.map */

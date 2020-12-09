@@ -1,0 +1,77 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.login-con {
+  width: 870px;
+  margin: 0 auto; }
+  .login-con input {
+    outline: none; }
+  .login-con input:focus {
+    outline: none; }
+  .login-con > .login-header {
+    margin-bottom: 20px; }
+  .login-con > .login-main {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between; }
+    .login-con > .login-main > .main-input {
+      margin-top: 50px; }
+      .login-con > .login-main > .main-input form {
+        width: 275px; }
+        .login-con > .login-main > .main-input form > .head > p {
+          height: 20px;
+          font-size: 12px;
+          color: #666666; }
+          .login-con > .login-main > .main-input form > .head > p span:nth-of-type(1) {
+            float: left; }
+          .login-con > .login-main > .main-input form > .head > p span:nth-of-type(2) {
+            float: right; }
+            .login-con > .login-main > .main-input form > .head > p span:nth-of-type(2) > span {
+              float: right;
+              width: 15px;
+              height: 15px;
+              background-image: url(../../pc图片/img/sprite_webpage.png);
+              background-repeat: no-repeat;
+              background-position-x: -13px;
+              background-position-y: -58px; }
+        .login-con > .login-main > .main-input form > .info > input {
+          background-repeat: no-repeat;
+          background-position: 3px 9px;
+          color: #a9a9a9;
+          width: 270px;
+          height: 34px;
+          border: 1px solid #666666;
+          margin-top: 15px; }
+        .login-con > .login-main > .main-input form > .info > .user {
+          background-image: url(../../pc图片/img/login_icon01.png); }
+        .login-con > .login-main > .main-input form > .info > .password {
+          background-image: url(../../pc图片/img/login_icon02.png); }
+        .login-con > .login-main > .main-input form > .choose {
+          margin-top: 10px; }
+          .login-con > .login-main > .main-input form > .choose > p {
+            float: right;
+            color: #ec454a; }
+        .login-con > .login-main > .main-input form > .submit > input {
+          background-color: #e63237;
+          border: none;
+          height: 34px;
+          width: 270px;
+          color: #ffffff;
+          margin-top: 20px;
+          outline: none; }
+        .login-con > .login-main > .main-input form > .tail > p {
+          color: #666666; }
+          .login-con > .login-main > .main-input form > .tail > p > span {
+            color: #ec454a; }
+  .login-con > .login-footer {
+    text-align: center;
+    color: #cccccc;
+    font-size: 12px; }
+
+/*# sourceMappingURL=login.css.map */

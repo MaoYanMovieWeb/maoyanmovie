@@ -13,7 +13,7 @@
         FROM
         user
         WHERE
-        uid = #{uid}
+            uid = #{uid}
     </select>
 
     <insert id="saveUserByUid">
