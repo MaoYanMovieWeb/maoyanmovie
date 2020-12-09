@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hut.maoyanmovie.dao.UserMapper">
 
-    <select id="select_uid" resultType="com.hut.maoyanmovie.bean.User">
+    <select id="getUserByUid" resultType="com.hut.maoyanmovie.bean.User">
         SELECT
         uid,
         user_name,
@@ -16,19 +16,19 @@
         uid = #{uid}
     </select>
 
-    <insert id="save_user">
+    <insert id="saveUserByUid">
         insert into
         user (user_name, user_password, user_tel)
         value (#{user_name},#{user_password},#{user_tel})
     </insert>
 
-    <delete id="delete_user">
+    <delete id="deleteUserByUid">
         delete
         from user
         where uid = #{uid}
     </delete>
 
-    <update id="update_user">
+    <update id="updateUserByUid">
         update user set
         user_name = #{user_name},
         user_password = #{user_password},

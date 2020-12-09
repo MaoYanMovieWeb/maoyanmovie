@@ -10,4 +10,11 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface UserMapper {
 
+    User getUserByUid (Integer uid);
+
+    void saveUserByUid (Integer uid);
+
+    void deleteUserByUid (Integer uid);
+
+    void updateUserByUid (Integer uid);
 }
