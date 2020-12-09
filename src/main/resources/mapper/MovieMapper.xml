@@ -16,12 +16,16 @@
         <result property="movie_money" column="movie_money"/>
     </resultMap>
 
-    <select id="getMovieByName" resultMap="movieMap">
+    <select id="getMovieByName" resultType="movieMap">
     select
-    *
+    mid,
+    movie_name,
+    movie_time,
+    movie_type
     from
     movie
     where
-    movie_name like '%${value}%'
+    movie_name
+    like '%${movie_name}%'
   </select>
 </mapper>
