@@ -7,7 +7,7 @@ import com.hut.maoyanmovie.bean.User;
  * @data 2020-12-09
  */
 public interface UserService {
-    User getUserByUid (Integer uid);
+    User loginUserByTel (String user_tel ,String user_password);
 
     void saveUserByUid (String user_name,String user_password ,String user_tel);
 

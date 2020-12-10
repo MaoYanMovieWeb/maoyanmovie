@@ -15,16 +15,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/getUserByUid")
-    public String getUserByUid (ModelMap modelMap,Integer uid){
-
-        return "/PC/login";
-    }
-    @GetMapping("/saveUserByUid")
+    @GetMapping("/")
+    //注册功能，保存数据
     public String saveUserByUid(String user_name, String user_password, String user_tel){
         userService.saveUserByUid(user_name, user_password, user_tel);
 
-        return "/PC/register";
+        return "/";
     }
 
 }

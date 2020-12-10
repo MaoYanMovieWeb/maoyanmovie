@@ -16,8 +16,8 @@ public class UserServiceimpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public User getUserByUid(Integer uid) {
-        return userMapper.getUserByUid(uid);
+    public User loginUserByTel(String user_tel, String user_password) {
+        return userMapper.loginUserByTel(user_tel, user_password);
     }
 
     @Override

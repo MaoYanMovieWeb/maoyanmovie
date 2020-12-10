@@ -1,0 +1,38 @@
+body{
+    font-family: "微软雅黑","黑体",sans-serif;
+    background-color: #fff;
+    /* 去除文本节点所占据的宽度 */
+    font-size: 0;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+input,button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+li{
+    list-style: none;
+}
+ul,p,dl,dd,h4,ol{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+.holderColor::-webkit-input-placeholder{
+    color: #a9a9a9;
+}
+.w{
+    width: 1200px;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.vh{
+    visibility: hidden;
+}

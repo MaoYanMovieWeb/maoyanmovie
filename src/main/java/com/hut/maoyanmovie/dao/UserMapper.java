@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Mapper
 public interface UserMapper {
 
-    User getUserByUid (Integer uid);
+    User loginUserByTel (String user_tel ,String user_password);
 
     void saveUserByUid (String user_name,String user_password ,String user_tel);
 
