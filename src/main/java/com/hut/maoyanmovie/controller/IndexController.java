@@ -10,39 +10,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class IndexController {
-
+//首页
     @GetMapping("/maoyanmovie")
     public String index()  {
         return "index";
     }
-
+//电影
     @GetMapping("movie")
     public String movie(){
         return "movie";
     }
-
+//榜单
     @GetMapping("ranking")
     public String ranking(){
         return "ranking";
     }
-
+//热点
     @GetMapping("interview")
     public String interview(){
         return "interview";
     }
-
+//订单
     @GetMapping("interorders")
     public String interorders(){
         return "interorders";
     }
 
 
-
+//登录
     @GetMapping("login")
     public String login(){
         return "login";
     }
-
+//注册
     @GetMapping("register")
     public String register(){
         return "register";
