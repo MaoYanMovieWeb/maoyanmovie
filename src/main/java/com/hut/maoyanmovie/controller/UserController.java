@@ -28,12 +28,15 @@ public class UserController {
     public String loginUserByTel(ModelMap modelMap , String user_tel , String user_password){
         User user = userService.loginUserByTel(user_tel, user_password);
         modelMap.put("user",user);
-
-        return "user";
+        return "loginsuccess";
     }
 
     @GetMapping("/test")
     public String test(){
         return "user";
+    }
+    @GetMapping("/loginsuccess")
+    public String loginsuccess(){
+        return "loginsuccess";
     }
 }
