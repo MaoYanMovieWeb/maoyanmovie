@@ -10,31 +10,45 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class IndexController {
+
     @GetMapping("/maoyanmovie")
     public String index()  {
         return "index";
     }
 
-    @GetMapping("login")
-    public String login(){
-        return "login";
-    }
     @GetMapping("movie")
     public String movie(){
         return "movie";
     }
+
     @GetMapping("ranking")
     public String ranking(){
         return "ranking";
     }
+
     @GetMapping("interview")
     public String interview(){
         return "interview";
     }
+
+    @GetMapping("interorders")
+    public String interorders(){
+        return "interorders";
+    }
+
+
+
+    @GetMapping("login")
+    public String login(){
+        return "login";
+    }
+
     @GetMapping("register")
     public String register(){
         return "register";
     }
+
+
     @GetMapping("intro")
     public String intro(){
         return "intro";
