@@ -53,4 +53,12 @@ public class IndexController {
     public String intro(){
         return "intro";
     }
+
+
+//榜单往下的下一层控制器
+    @GetMapping("/mostexpectedranking")
+    public String mostexpectedranking(){ return "mostexpectedranking"; }
+
+    @GetMapping("/boxofficeranking")
+    public String boxofficeranking(){ return "boxofficeranking"; }
 }

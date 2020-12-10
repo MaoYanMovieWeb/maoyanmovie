@@ -204,7 +204,25 @@
 
     </div>
 
+    <table border="1" cellpadding="0" cellspacing="0" width="500">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>用户编号</th>
+            <th>电影编号</th>
+            <th>日期</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  name="id" th:each="orders : ${orders}">
+            <td th:text="${orders.oid}"></td>
+            <td th:text="${orders.uid}"></td>
+            <td th:text="${orders.order_time}"></td>
+            <td></td>
+        </tr>
+        </tbody>
 
+    </table>
 
 
 
