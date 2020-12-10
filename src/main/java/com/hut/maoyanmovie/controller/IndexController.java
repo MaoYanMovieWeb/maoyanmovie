@@ -15,4 +15,28 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("login")
+    public String login(){
+        return "login";
+    }
+    @GetMapping("movie")
+    public String movie(){
+        return "movie";
+    }
+    @GetMapping("ranking")
+    public String ranking(){
+        return "ranking";
+    }
+    @GetMapping("interview")
+    public String interview(){
+        return "interview";
+    }
+    @GetMapping("register")
+    public String register(){
+        return "register";
+    }
+    @GetMapping("intro")
+    public String intro(){
+        return "intro";
+    }
 }
