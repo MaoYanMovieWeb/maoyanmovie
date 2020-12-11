@@ -63,20 +63,31 @@ public class IndexController {
     public String boxofficeranking(){ return "boxofficeranking"; }
 
 
+/*
+* 以下为后台页面控制器
+*
+* */
 
 
-
+    @GetMapping(value="/admin")
+    public String admin(){
+        return "redirect:admin_category_list";
+    }
 
     @GetMapping(value="/admin_category_list")
     public String listCategory(){
         return "admin/listCategory";
     }
-    @GetMapping(value="/admin_category_list")
+
+    @GetMapping("/admin_user_list")
+    public String listUser(){
+        return "/admin/listUser";
+    }
+
+    @GetMapping("/admin_order_list")
     public String listOrder(){
-        return "admin/listOrder";
+        return "/admin/listOrder";
     }
-    @GetMapping(value="/admin")
-    public String admin(){
-        return "redirect:admin_category_list";
-    }
+
+
 }
