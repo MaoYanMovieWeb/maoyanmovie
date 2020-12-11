@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -159,13 +159,13 @@
             <img src="../IMG/details_meigonghe_03.jpg" alt="">
             <div class="name">
                 <div class="box1">
-                    <p>湄公河行动</p>
+                    <p class="name" th:text="${movies.movie_name}">
                     <p>Operation Mekong</p>
                 </div>
                 <div class="box2">
-                    <p>动作,犯罪,剧情</p>
-                    <p>中国大陆,中国香港/124分钟</p>
-                    <p>2016-09-30大陆上映</p>
+                    <p th:text="${movies.movie_type}"></p>
+                    <p th:text="${movies.movie_region}"></p>
+                    <p th:text="${movies.movie_time}"></p>
                 </div>
                 <div class="box3">
                     <div class="heart">
@@ -185,7 +185,7 @@
                             用户评分
                         </div>
                         <div>
-                            <p>9.3</p>
+                            <p th:text="${movies.movie_score}"></p>
                             <p>(55.6万人评分)</p>
                         </div>
                     </div>
@@ -203,7 +203,7 @@
                             累计票房
                         </div>
                         <div class="office">
-                            10.33亿
+                            <p th:text="${movies.movie_money}"></p>
                         </div>
                     </div>
                 </div>
@@ -231,7 +231,7 @@
 
                     <div class="story">
                         <p>剧情简介</p>
-                        <p>2011年10月5日，两艘中国商船在湄公河金三角水域遭遇袭击，13名中国船员全部遇难，泰国警方从船上搜出90万颗冰毒。消息传回国内，举国震惊。为了查明真相，云南缉毒总队长高刚(张涵予饰）接受了特殊任务，率领一支骁勇善战的战斗小组进入泰国境内，与潜伏在泰国的情报员方新武（彭于晏饰）碰头，二人联手深入金三角查案。经过调查，发现案件背后果然有着重重疑点，真正的凶手在嫁祸残害无辜中国船员后，不但逍遥法外，更意图利用毒品制造更大的阴谋......二人决定，不惜一切代价也要拿下真凶，打击毒品犯罪，为无辜国人讨回公道!</p>
+                        <p th:text="${movies.movie_information}">2011年10月5日，两艘中国商船在湄公河金三角水域遭遇袭击，13名中国船员全部遇难，泰国警方从船上搜出90万颗冰毒。消息传回国内，举国震惊。为了查明真相，云南缉毒总队长高刚(张涵予饰）接受了特殊任务，率领一支骁勇善战的战斗小组进入泰国境内，与潜伏在泰国的情报员方新武（彭于晏饰）碰头，二人联手深入金三角查案。经过调查，发现案件背后果然有着重重疑点，真正的凶手在嫁祸残害无辜中国船员后，不但逍遥法外，更意图利用毒品制造更大的阴谋......二人决定，不惜一切代价也要拿下真凶，打击毒品犯罪，为无辜国人讨回公道!</p>
                     </div>
 
                     <div class="people">

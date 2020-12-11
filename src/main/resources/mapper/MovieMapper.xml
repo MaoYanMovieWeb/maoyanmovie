@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hut.maoyanmovie.dao.MovieMapper">
+
+    <resultMap id="movieMap" type="com.hut.maoyanmovie.bean.Movie">
+        <id property="mid" column="mid"/>
+        <result property="movie_name" column="movie_name"/>
+        <result property="movie_time" column="movie_time"/>
+        <result property="movie_type" column="movie_type"/>
+        <result property="movie_information" column="movie_information"/>
+        <result property="movie_region" column="movie_region"/>
+        <result property="movie_photo" column="movie_photo"/>
+        <result property="movie_score" column="movie_score"/>
+        <result property="movie_money" column="movie_money"/>
+    </resultMap>
+
+    <select id="getMovieByName" resultMap="movieMap">
+    select
+    mid,
+    movie_name,
+    movie_time,
+    movie_type
+    from
+    movie
+    where
+    movie_name
+    like
+    '%${movie_name}%'
+   </select>
+
+    <select id="getById" resultMap="movieMap">
+    select
+    *
+    from
+    movie
+    where
+    mid=#{mid}
+    </select>
+
+    <insert id="saveMovie">
+    INSERT into
+     movie (mid,movie_name,movie_time,movie_type,movie_information,movie_region,movie_score,movie_money)
+    values (#{mid},#{movie_name},#{movie_time},#{movie_type},#{movie_information},#{movie_region},#{movie_score},#{movie_money})
+    </insert>
+
+    <delete id="deleteMovieById">
+    DELETE
+    from
+    movie
+    where
+    mid=#{mid}
+    </delete>
+
+    <update id="updateMovie">
+     UPDATE
+     movie
+     set
+     movie_name=#{movie_name},
+     movie_time=#{movie_time},
+     movie_type=#{movie_type},
+     movie_information=#{movie_information},
+     movie_region=#{movie_region},
+     movie_score=#{movie_score},
+     movie_money=#{movie_money}
+     where
+     mid=#{mid}
+    </update>
+</mapper>

@@ -9,6 +9,7 @@ public class Movie {
 
     private Integer mid;
     private String movie_name;
+    private String movie_english;
     private String movie_time;
     private String movie_type;
     private String movie_information;
@@ -21,11 +22,10 @@ public class Movie {
         super();
     }
 
-    public Movie(Integer mid, String movie_name, String movie_time,
-                 String movie_type, String movie_information, String movie_region,
-                 String movie_photo, String movie_score, String movie_money) {
+    public Movie(Integer mid, String movie_name, String movie_english, String movie_time, String movie_type, String movie_information, String movie_region, String movie_photo, String movie_score, String movie_money) {
         this.mid = mid;
         this.movie_name = movie_name;
+        this.movie_english = movie_english;
         this.movie_time = movie_time;
         this.movie_type = movie_type;
         this.movie_information = movie_information;
@@ -49,6 +49,14 @@ public class Movie {
 
     public void setMovie_name(String movie_name) {
         this.movie_name = movie_name;
+    }
+
+    public String getMovie_english() {
+        return movie_english;
+    }
+
+    public void setMovie_english(String movie_english) {
+        this.movie_english = movie_english;
     }
 
     public String getMovie_time() {
@@ -112,6 +120,7 @@ public class Movie {
         return "Movie{" +
                 "mid=" + mid +
                 ", movie_name='" + movie_name + '\'' +
+                ", movie_english='" + movie_english + '\'' +
                 ", movie_time='" + movie_time + '\'' +
                 ", movie_type='" + movie_type + '\'' +
                 ", movie_information='" + movie_information + '\'' +
