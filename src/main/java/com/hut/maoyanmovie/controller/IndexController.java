@@ -61,4 +61,14 @@ public class IndexController {
 
     @GetMapping("/boxofficeranking")
     public String boxofficeranking(){ return "boxofficeranking"; }
+
+
+    @GetMapping(value="/admin_category_list")
+    public String listCategory(){
+        return "admin/listCategory";
+    }
+    @GetMapping(value="/admin")
+    public String admin(){
+        return "redirect:admin_category_list";
+    }
 }
