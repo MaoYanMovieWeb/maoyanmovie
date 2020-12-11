@@ -63,9 +63,17 @@ public class IndexController {
     public String boxofficeranking(){ return "boxofficeranking"; }
 
 
+
+
+
+
     @GetMapping(value="/admin_category_list")
     public String listCategory(){
         return "admin/listCategory";
+    }
+    @GetMapping(value="/admin_category_list")
+    public String listOrder(){
+        return "admin/listOrder";
     }
     @GetMapping(value="/admin")
     public String admin(){
