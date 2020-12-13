@@ -64,4 +64,11 @@
      where
      mid=#{mid}
     </update>
+
+    <select id="getAll" resultMap="movieMap">
+        select
+            *
+        from
+            movie
+    </select>
 </mapper>

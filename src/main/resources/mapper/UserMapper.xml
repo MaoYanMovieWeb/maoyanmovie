@@ -34,4 +34,8 @@
         where
         uid = #{uid}
     </update>
+
+    <select id="selectAll" resultType="com.hut.maoyanmovie.bean.User">
+        select uid , user_name , user_tel from user
+    </select>
 </mapper>

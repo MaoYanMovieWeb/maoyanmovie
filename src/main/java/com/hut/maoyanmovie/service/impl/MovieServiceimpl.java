@@ -29,4 +29,9 @@ public class MovieServiceimpl implements MovieService {
     public void updateMovie(Movie movie){
         movieMapper.updateMovie(movie);
     }
+
+    @Override
+    public List<Movie> getAll() {
+        return movieMapper.getAll();
+    }
 }

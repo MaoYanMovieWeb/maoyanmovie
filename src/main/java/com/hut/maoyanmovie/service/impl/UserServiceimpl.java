@@ -6,6 +6,8 @@ import com.hut.maoyanmovie.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author HP
  * @data 2020-12-09
@@ -33,6 +35,11 @@ public class UserServiceimpl implements UserService {
     @Override
     public void updateUserByUid(User user) {
 
+    }
+
+    @Override
+    public List<User> selectAll() {
+        return userMapper.selectAll();
     }
 
 }

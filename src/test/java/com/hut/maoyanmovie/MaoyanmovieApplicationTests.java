@@ -8,10 +8,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class MaoyanmovieApplicationTests {
-
+    @Autowired
+    UserMapper userMapper;
     @Test
     void contextLoads() {
-
+        System.out.println(userMapper.selectAll());
     }
 
 }

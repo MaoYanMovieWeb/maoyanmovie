@@ -1,8 +1,20 @@
 package com.hut.maoyanmovie.controller;
 
+import java.util.*;
+
+import com.hut.maoyanmovie.bean.Movie;
+import com.hut.maoyanmovie.bean.Orders;
+import com.hut.maoyanmovie.bean.User;
+import com.hut.maoyanmovie.service.MovieService;
+import com.hut.maoyanmovie.service.OrdersService;
+import com.hut.maoyanmovie.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+
+
+import java.util.List;
 
 /**
  * @author HP
@@ -10,6 +22,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class IndexController {
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private MovieService movieService;
+    @Autowired
+    private OrdersService ordersService;
 //首页
     @GetMapping("/maoyanmovie")
     public String index()  {
@@ -70,22 +88,46 @@ public class IndexController {
 
 
     @GetMapping(value="/admin")
-    public String admin(){
+    public String admin(ModelMap modelMap){
+        List<User> users = userService.selectAll();
+        List<Movie> movies = movieService.getAll();
+        List<Orders> orders = ordersService.getAll();
+        modelMap.put("users",users);
+        modelMap.put("movies",movies);
+        modelMap.put("orders",orders);
         return "redirect:admin_category_list";
     }
 
     @GetMapping(value="/admin_category_list")
-    public String listCategory(){
+    public String listCategory(ModelMap modelMap){
+        List<User> users = userService.selectAll();
+        List<Movie> movies = movieService.getAll();
+        List<Orders> orders = ordersService.getAll();
+        modelMap.put("users",users);
+        modelMap.put("movies",movies);
+        modelMap.put("orders",orders);
         return "admin/listCategory";
     }
 
     @GetMapping("/admin_user_list")
-    public String listUser(){
+    public String listUser(ModelMap modelMap){
+        List<User> users = userService.selectAll();
+        List<Movie> movies = movieService.getAll();
+        List<Orders> orders = ordersService.getAll();
+        modelMap.put("users",users);
+        modelMap.put("movies",movies);
+        modelMap.put("orders",orders);
         return "/admin/listUser";
     }
 
     @GetMapping("/admin_order_list")
-    public String listOrder(){
+    public String listOrder(ModelMap modelMap){
+        List<User> users = userService.selectAll();
+        List<Movie> movies = movieService.getAll();
+        List<Orders> orders = ordersService.getAll();
+        modelMap.put("users",users);
+        modelMap.put("movies",movies);
+        modelMap.put("orders",orders);
         return "/admin/listOrder";
     }
 

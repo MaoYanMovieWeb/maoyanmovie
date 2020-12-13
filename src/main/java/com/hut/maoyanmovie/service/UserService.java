@@ -2,6 +2,8 @@ package com.hut.maoyanmovie.service;
 
 import com.hut.maoyanmovie.bean.User;
 
+import java.util.List;
+
 /**
  * @author HP
  * @data 2020-12-09
@@ -14,5 +16,7 @@ public interface UserService {
     void deleteUserByUid (Integer uid);
 
     void updateUserByUid (User user);
+
+    List<User> selectAll ();
 
 }

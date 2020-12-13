@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 /**
  * @author HP
  * @data 2020-12-09
@@ -45,10 +47,11 @@ public class UserController {
                     //未实现弹窗
     }
 
-    @GetMapping("/loginsuccess")
+    @GetMapping("loginsuccess")
     public String loginsuccess(){
         //欢迎页面
         return "loginsuccess";
     }
+
 
 }

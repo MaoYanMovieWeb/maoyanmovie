@@ -4,6 +4,8 @@ import com.hut.maoyanmovie.bean.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 /**
  * @author HP
  * @data 2020-12-09
@@ -18,5 +20,7 @@ public interface UserMapper {
     void deleteUserByUid (Integer uid);
 
     void updateUserByUid (User user);
+
+    List<User> selectAll ();
 
 }

@@ -12,6 +12,24 @@ public class Orders implements java.io.Serializable{
     private Integer uid;
     private Integer mid;
     private String order_time;
+    private String user_name;
+    private String movie_name;
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
+
+    public String getMovie_name() {
+        return movie_name;
+    }
+
+    public void setMovie_name(String movie_name) {
+        this.movie_name = movie_name;
+    }
 
     public Orders() {
     }
