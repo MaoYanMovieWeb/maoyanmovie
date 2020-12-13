@@ -71,7 +71,7 @@
         <tr>
             <th>oid</th>
             <th>用户昵称</th>
-            <th>电影名</th>
+            <th>电影中文名</th>
             <th>订单时间</th>
             <th>操作</th>
 
@@ -79,7 +79,7 @@
         </thead>
         <tbody>
         <tr th:each="orders:${orders}">
-            <td th:text="${orders.mid}"></td>
+            <td th:text="${orders.oid}"></td>
             <td th:text="${orders.user_name}"></td>
             <td th:text="${orders.movie_name}"></td>
             <td th:text="${orders.order_time}"></td>

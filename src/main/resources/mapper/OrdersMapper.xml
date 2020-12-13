@@ -42,18 +42,13 @@
 
 
     <select id="getAll" resultMap="OrdersMapper">
-      SELECT
-        o.oid,u.user_name,m.movie_name,o.order_time
-    FROM
-        orders as o
-    INNER JOIN
-    user as u
-    ON
-        o.uid = u.uid
-    INNER JOIN
-        movie AS m
-    ON
-        m.mid = m.mid
+
+        SELECT
+            o.oid,u.user_name,m.movie_name,o.order_time
+        FROM
+            orders o,USER u,movie m
+        WHERE
+            o.uid = u.uid  AND o.mid = m.mid;
     </select>
 
 </mapper>
