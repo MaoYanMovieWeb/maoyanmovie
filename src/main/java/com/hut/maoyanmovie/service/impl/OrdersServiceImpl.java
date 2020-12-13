@@ -37,4 +37,9 @@ public class OrdersServiceImpl implements OrdersService {
     public void insertOrdersByOid(Orders order) {
         ordersMapper.insertOrdersByOid(order);
     }
+
+    @Override
+    public List<Object> getAll() {
+        return ordersMapper.getAll();
+    }
 }

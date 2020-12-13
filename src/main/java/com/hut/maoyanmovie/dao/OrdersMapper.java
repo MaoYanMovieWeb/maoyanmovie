@@ -23,4 +23,7 @@ public interface OrdersMapper {
 
     void insertOrdersByOid(Orders order);               //添加订单
 
+    //关联查询
+    List<Object> getAll();       //根据订单ID查询
+
 }

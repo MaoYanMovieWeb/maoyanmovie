@@ -18,4 +18,6 @@ public interface OrdersService {
 
     void insertOrdersByOid(Orders order);
 
+    List<Object > getAll();
+
 }
