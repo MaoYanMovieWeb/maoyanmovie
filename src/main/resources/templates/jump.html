@@ -130,15 +130,19 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="./index.html">首页</a></li>
-                    <li><a href="./movie.html">电影</a></li>
-                    <li><a href="./ranking.html">榜单</a></li>
-                    <li><a href="./interview.html">热点</a></li>
+                    <li><a href="./maoyanmovie">首页</a></li>
+                    <li><a href="./movie">电影</a></li>
+                    <li><a href="./ranking">榜单</a></li>
+                    <li><a href="./interview">热点</a></li>
                 </ul>
             </div>
             <div class="search">
-                <input type="search" value="找影视剧、影人、影院">
-                <input type="submit" value="">
+                <form action="getMovieByName">
+                    <input type="search" placeholder="找影视剧、影人、影院"
+
+                           id="movie_name" name="movie_name">
+                    <input type="submit" value="">
+                </form>
             </div>
             <div class="user">
                 <img src="../img/7dd82a16316ab32c8359debdb04396ef2897.png" alt="">
@@ -154,7 +158,7 @@
     <div class="empty">
     </div>
 
-    <div>
+    <div >
         <table border="1" cellpadding="0" cellspacing="0" width="500">
             <thead>
             <tr>
