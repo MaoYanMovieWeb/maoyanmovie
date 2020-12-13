@@ -18,10 +18,7 @@
 
     <select id="getMovieByName" resultMap="movieMap">
     select
-    mid,
-    movie_name,
-    movie_time,
-    movie_type
+    *
     from
     movie
     where

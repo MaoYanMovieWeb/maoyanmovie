@@ -8,11 +8,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class MaoyanmovieApplicationTests {
-    @Autowired
-    MovieService movieService;
+
     @Test
     void contextLoads() {
-
 
     }
 

@@ -130,10 +130,10 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="./index.html">首页</a></li>
-                    <li><a href="./movie.html">电影</a></li>
-                    <li><a href="./ranking.html">榜单</a></li>
-                    <li><a href="./interview.html">热点</a></li>
+                    <li><a href="./maoyanmovie">首页</a></li>
+                    <li><a href="./movie">电影</a></li>
+                    <li><a href="./ranking">榜单</a></li>
+                    <li><a href="./interview">热点</a></li>
                 </ul>
             </div>
             <div class="search">
@@ -141,7 +141,7 @@
                 <input type="submit" value="">
             </div>
             <div class="user">
-                <img src="../pc图片/img/7dd82a16316ab32c8359debdb04396ef2897.png" alt="">
+                <img src="../img/7dd82a16316ab32c8359debdb04396ef2897.png" alt="">
                 <div class="trian">
                 </div>
                 <div class="login">
@@ -156,11 +156,11 @@
 
     <div class="neck">
         <div class="container">
-            <img src="../IMG/details_meigonghe_03.jpg" alt="">
+            <img th:src="${movies.movie_photo}" alt="">
             <div class="name">
                 <div class="box1">
                     <p class="name" th:text="${movies.movie_name}">
-                    <p>Operation Mekong</p>
+                    <p th:text="${movies.movie_english}"></p>
                 </div>
                 <div class="box2">
                     <p th:text="${movies.movie_type}"></p>

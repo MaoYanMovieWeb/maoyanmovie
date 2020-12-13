@@ -29,4 +29,11 @@ public class MovieController {
         modelMap.put("movies",movies);
         return "intro";
     }
+
+    @GetMapping("/getMovieByName")
+    public String getName(ModelMap modelMap,String movie_name){
+        List<Movie> movies=movieService.getMovieByName(movie_name);
+        modelMap.put("movies",movies);
+        return "jump";
+    }
 }

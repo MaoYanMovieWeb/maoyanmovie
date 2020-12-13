@@ -36,7 +36,7 @@ a {
               float: right;
               width: 15px;
               height: 15px;
-              background-image: url(../../pc图片/img/sprite_webpage.png);
+              background-image: url(../img/sprite_webpage.png);
               background-repeat: no-repeat;
               background-position-x: -13px;
               background-position-y: -58px; }
@@ -49,9 +49,9 @@ a {
           border: 1px solid #666666;
           margin-top: 15px; }
         .login-con > .login-main > .main-input form > .info > .user {
-          background-image: url(../../pc图片/img/login_icon01.png); }
+          background-image: url(../img/login_icon01.png); }
         .login-con > .login-main > .main-input form > .info > .password {
-          background-image: url(../../pc图片/img/login_icon02.png); }
+          background-image: url(../img/login_icon02.png); }
         .login-con > .login-main > .main-input form > .choose {
           margin-top: 10px; }
           .login-con > .login-main > .main-input form > .choose > p {

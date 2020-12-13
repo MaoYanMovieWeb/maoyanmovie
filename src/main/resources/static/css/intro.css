@@ -37,7 +37,7 @@ a {
       .header > .container .position > .trian {
         width: 10px;
         height: 5px;
-        background-image: url(../../pc图片/img/sprite_webpage.png);
+        background-image: url(../img/sprite_webpage.png);
         background-repeat: no-repeat;
         background-position-x: 0;
         background-position-y: -63px;
@@ -108,7 +108,7 @@ a {
         top: 0;
         border-radius: 30px;
         border: none;
-        background-image: url(../../pc图片/img/sprite_webpage.png);
+        background-image: url(../img/sprite_webpage.png);
         background-repeat: no-repeat;
         background-position-x: 0px;
         background-position-y: -0px;
@@ -125,7 +125,7 @@ a {
       .header > .container .user > .trian {
         width: 10px;
         height: 5px;
-        background-image: url(../../pc图片/img/sprite_webpage.png);
+        background-image: url(../img/sprite_webpage.png);
         background-repeat: no-repeat;
         background-position-x: 0;
         background-position-y: -63px;
@@ -151,7 +151,7 @@ a {
 
 .neck {
   height: 377px;
-  background-image: url(../../IMG/banner.11111.png); }
+  background-image: url(../IMG/banner.11111.png); }
   .neck .container {
     position: relative; }
     .neck .container > img {

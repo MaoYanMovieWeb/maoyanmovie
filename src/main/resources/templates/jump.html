@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/interview.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo_s.png" alt="">
+            </div>
+            <div class="position">
+                <p>成都</p>
+                <div class="trian">
+                </div>
+                <div class="city">
+                    <div class="at">
+                        定位城市：成都
+                    </div>
+                    <div class="other">
+                        A
+                        <div>
+                            <p>阿勒泰</p>
+                            <p>安庆</p>
+                            <p>安顺</p>
+                            <p>阿克苏</p>
+                            <p>安溪</p>
+                        </div>
+                        B
+                        <div>
+                            <p>北京</p>
+                            <p>本溪</p>
+                            <p>保定</p>
+                            <p>巴彦淖尔</p>
+                            <p>北海</p>
+                        </div>
+                        C
+                        <div>
+                            <p>重庆</p>
+                            <p>长沙</p>
+                            <p>常州</p>
+                            <p>长春</p>
+                            <p>承德</p>
+                        </div>
+                        D
+                        <div>
+                            <p>大连</p>
+                            <p>东莞</p>
+                            <p>大庆</p>
+                            <p>德阳</p>
+                            <p>达州</p>
+                        </div>
+                        E
+                        <div>
+                            <p>鄂尔多斯</p>
+                            <p>恩施</p>
+                            <p>峨眉山</p>
+                        </div>
+                        F
+                        <div>
+                            <p>福州</p>
+                            <p>佛山</p>
+                            <p>抚顺</p>
+                            <p>防城港</p>
+                        </div>
+                        G
+                        <div>
+                            <p>广州</p>
+                            <p>桂林</p>
+                            <p>贵阳</p>
+                            <p>广安</p>
+                            <p>赣州</p>
+                        </div>
+                        H
+                        <div>
+                            <p>杭州</p>
+                            <p>合肥</p>
+                            <p>海口</p>
+                            <p>哈尔滨</p>
+                            <p>呼和浩特</p>
+                        </div>
+                        J
+                        <div>
+                            <p>锦州</p>
+                            <p>济南</p>
+                            <p>焦作</p>
+                            <p>九江</p>
+                            <p>嘉兴</p>
+                        </div>
+                        K
+                        <div>
+                            <p>昆明</p>
+                            <p>开封</p>
+                            <p>昆山</p>
+                            <p>喀什</p>
+                            <p>克拉玛依</p>
+                        </div>
+                        L
+                        <div>
+                            <p>廊坊</p>
+                            <p>临汾</p>
+                            <p>连云港</p>
+                            <p>洛阳</p>
+                            <p>乐山</p>
+                        </div>
+                        M
+                        <div>
+                            <p>牡丹江</p>
+                            <p>马鞍山</p>
+                            <p>茂名</p>
+                            <p>梅州</p>
+                            <p>绵阳</p>
+                        </div>
+                        N
+                        <div>
+                            <p>宁波</p>
+                            <p>南京</p>
+                            <p>南昌</p>
+                            <p>南通</p>
+                            <p>南宁</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./movie.html">电影</a></li>
+                    <li><a href="./ranking.html">榜单</a></li>
+                    <li><a href="./interview.html">热点</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="search" value="找影视剧、影人、影院">
+                <input type="submit" value="">
+            </div>
+            <div class="user">
+                <img src="../img/7dd82a16316ab32c8359debdb04396ef2897.png" alt="">
+                <div class="trian">
+                </div>
+                <div class="login">
+                    <a href="./login.html">登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="empty">
+    </div>
+
+    <div>
+        <table border="1" cellpadding="0" cellspacing="0" width="500">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>电影名</th>
+                <th>类型</th>
+                <th>上映时间</th>
+                <th>电影封面</th>
+            </tr>
+            </thead>
+            <tbody>
+            <form action="">
+            <tr th:each="mov: ${movies}" name="id">
+                <td th:text="${mov.mid}" th:value="${mov.mid}"></td>
+                <td ><a th:href="@{./getById(mid=${mov.mid})}" th:text="${mov.movie_name}"></a></td>
+                <td th:text="${mov.movie_type}"></td>
+                <td th:text="${mov.movie_time}"></td>
+                <td><a th:href="@{./getById(mid=${mov.mid})}"> <img th:src="${mov.movie_photo}"/> </a></td>
+            </tr>
+            </form>
+            </tbody>
+        </table>
+    </div>
+
+    
+
+    <div class="cat">
+        <a href="#"><img src="../IMG/details_cat.png" alt=""></a>
+    </div>
+
+
+</body>
+
+</html>

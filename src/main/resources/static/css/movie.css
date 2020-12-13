@@ -37,7 +37,7 @@ a {
       .header > .container .position > .trian {
         width: 10px;
         height: 5px;
-        background-image: url(../../pc图片/img/sprite_webpage.png);
+        background-image: url(../img/sprite_webpage.png);
         background-repeat: no-repeat;
         background-position-x: 0;
         background-position-y: -63px;
@@ -111,7 +111,7 @@ a {
         top: 0;
         border-radius: 30px;
         border: none;
-        background-image: url(../../pc图片/img/sprite_webpage.png);
+        background-image: url(../img/sprite_webpage.png);
         background-repeat: no-repeat;
         background-position-x: 0px;
         background-position-y: -0px;
@@ -128,7 +128,7 @@ a {
       .header > .container .user > .trian {
         width: 10px;
         height: 5px;
-        background-image: url(../../pc图片/img/sprite_webpage.png);
+        background-image: url(../img/sprite_webpage.png);
         background-repeat: no-repeat;
         background-position-x: 0;
         background-position-y: -63px;
@@ -228,7 +228,7 @@ a {
         border: 1px solid #d9d9d9;
         border-radius: 50%; }
     .movie .movie-con > ul > li:first-of-type > span:first-of-type {
-      background-image: url(../../pc图片/img/17t8eg23iuf87rtgf39gf240gfoui45kgi.png); }
+      background-image: url(../img/17t8eg23iuf87rtgf39gf240gfoui45kgi.png); }
   .movie .movie-con .movie-list {
     margin: 0 auto; }
     .movie .movie-con .movie-list > dl {
