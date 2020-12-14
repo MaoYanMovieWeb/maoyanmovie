@@ -38,4 +38,8 @@
     <select id="selectAll" resultType="com.hut.maoyanmovie.bean.User">
         select uid , user_name , user_tel from user
     </select>
+
+    <select id="save_myself" resultType="com.hut.maoyanmovie.bean.User">
+        select uid from user where uid = #{uid}
+    </select>
 </mapper>

@@ -19,4 +19,8 @@ public interface UserService {
 
     List<User> selectAll ();
 
+    Integer save_myself (Integer uid);
+
+
+
 }

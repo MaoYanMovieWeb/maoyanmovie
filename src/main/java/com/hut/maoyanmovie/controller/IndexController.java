@@ -1,7 +1,5 @@
 package com.hut.maoyanmovie.controller;
 
-import java.util.*;
-
 import com.hut.maoyanmovie.bean.Movie;
 import com.hut.maoyanmovie.bean.Orders;
 import com.hut.maoyanmovie.bean.User;
@@ -14,6 +12,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -60,11 +59,12 @@ public class IndexController {
 
         return "interorders";
     }
-
-
 //登录
     @GetMapping("login")
-    public String login(){
+    public String login(HttpSession session){
+        if(session.getAttribute("loginUser") != null){
+            return "logging";
+        }
         return "login";
     }
 //注册

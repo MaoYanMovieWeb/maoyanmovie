@@ -42,4 +42,10 @@ public class UserServiceimpl implements UserService {
         return userMapper.selectAll();
     }
 
+    @Override
+    public Integer save_myself(Integer uid) {
+
+        return userMapper.save_myself(uid);
+    }
+
 }
