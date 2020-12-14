@@ -46,7 +46,7 @@
         SELECT
             o.oid,u.user_name,m.movie_name,o.order_time
         FROM
-            orders o,USER u,movie m
+            orders o,user u,movie m
         WHERE
             o.uid = u.uid  AND o.mid = m.mid;
     </select>

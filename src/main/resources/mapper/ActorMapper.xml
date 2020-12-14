@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hut.maoyanmovie.dao.ActorMapper">
+
+    <resultMap id="actorMap" type="com.hut.maoyanmovie.bean.Actor">
+        <id property="aid" column="aid"/>
+        <result property="mid" column="mid"/>
+        <result property="director_name" column="director_name"/>
+        <result property="director_photo" column="director_photo"/>
+        <result property="actor_name1" column="actor_name1"/>
+        <result property="actor_photo1" column="actor_photo1"/>
+        <result property="actor_name2" column="actor_name2"/>
+        <result property="actor_photo2" column="actor_photo2"/>
+        <result property="actor_name3" column="actor_name3"/>
+        <result property="actor_photo3" column="actor_photo3"/>
+        <result property="actor_name4" column="actor_name4"/>
+        <result property="actor_photo4" column="actor_photo4"/>
+    </resultMap>
+
+    <select id="getActor" resultMap="actorMap">
+        select
+        *
+        from
+        actor a,movie m
+        where
+        a.mid=m.mid and a.mid=#{mid}
+    </select>
+
+</mapper>

@@ -149,7 +149,7 @@
                 <div class="trian">
                 </div>
                 <div class="login">
-                    <a href="./login.html">登录</a>
+                    <a href="./login">登录</a>
                 </div>
             </div>
         </div>
@@ -235,7 +235,7 @@
 
                     <div class="story">
                         <p>剧情简介</p>
-                        <p th:text="${movies.movie_information}">2011年10月5日，两艘中国商船在湄公河金三角水域遭遇袭击，13名中国船员全部遇难，泰国警方从船上搜出90万颗冰毒。消息传回国内，举国震惊。为了查明真相，云南缉毒总队长高刚(张涵予饰）接受了特殊任务，率领一支骁勇善战的战斗小组进入泰国境内，与潜伏在泰国的情报员方新武（彭于晏饰）碰头，二人联手深入金三角查案。经过调查，发现案件背后果然有着重重疑点，真正的凶手在嫁祸残害无辜中国船员后，不但逍遥法外，更意图利用毒品制造更大的阴谋......二人决定，不惜一切代价也要拿下真凶，打击毒品犯罪，为无辜国人讨回公道!</p>
+                        <p th:text="${movies.movie_information}"></p>
                     </div>
 
                     <div class="people">
@@ -243,31 +243,31 @@
                         <div class="people-con">
                             <div class="director">
                                 <p>导演</p>
-                                <img src="../IMG/details_fengxiaogang_07.jpg" alt="">
-                                <p>林超贤</p>
+                                <img th:src="${actor.director_photo}" alt="">
+                                <p th:text="${actor.director_name}"></p>
                             </div>
                             <div class="actor">
                                 <p>演员</p>
                                 <div class="actor-con">
                                     <div class="actor-box">
-                                        <img src="../IMG/details_zhanghanyu_09.jpg" alt="">
-                                        <p>张涵予</p>
-                                        <p>饰：高刚</p>
+                                        <img th:src="${actor.actor_photo1}" alt="">
+                                        <p th:text="${actor.actor_name1}"></p>
+
                                     </div>
                                     <div class="actor-box">
-                                        <img src="../IMG/details_pengyuyan_11.jpg" alt="">
-                                        <p>彭于晏</p>
-                                        <p>饰：方新武</p>
+                                        <img th:src="${actor.actor_photo2}" alt="">
+                                        <p th:text="${actor.actor_name2}"></p>
+
                                     </div>
                                     <div class="actor-box">
-                                        <img src="../IMG/details_fengwenjuan_13.jpg" alt="">
-                                        <p>冯文娟</p>
-                                        <p>饰：郭冰</p>
+                                        <img th:src="${actor.actor_photo3}" alt="">
+                                        <p th:text="${actor.actor_name3}"></p>
+
                                     </div>
                                     <div class="actor-box">
-                                        <img src="../IMG/details_wuxudong_15.jpg" alt="">
-                                        <p>吴旭东</p>
-                                        <p>饰：特警队长</p>
+                                        <img th:src="${actor.actor_photo4}" alt="">
+                                        <p th:text="${actor.actor_name4}"></p>
+
                                     </div>
 
                                 </div>

@@ -1,7 +1,9 @@
 package com.hut.maoyanmovie.controller;
 
+import com.hut.maoyanmovie.bean.Actor;
 import com.hut.maoyanmovie.bean.Movie;
 import com.hut.maoyanmovie.dao.MovieMapper;
+import com.hut.maoyanmovie.service.ActorService;
 import com.hut.maoyanmovie.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,12 +23,14 @@ public class MovieController {
     @Autowired
     MovieService movieService;
     @Autowired
-    MovieMapper movieMapper;
+    ActorService actorService;
 
     @GetMapping("/getById")
     public String intro(ModelMap modelMap,Integer mid){
         Movie movies=movieService.getById(mid);
+        Actor actor=actorService.getActor(mid);
         modelMap.put("movies",movies);
+        modelMap.put("actor",actor);
         return "intro";
     }
 
