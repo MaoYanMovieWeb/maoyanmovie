@@ -10,8 +10,8 @@
 </head>
 
 <body>
-<div class="header">
-    <div class="container">
+    <div class="header">
+     <div class="container">
         <div class="logo">
             <img src="../img/logo_s.png" alt="">
         </div>
@@ -150,102 +150,32 @@
     </div>
 </div>
 
+    <!-- 订单主体页面-->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="empty">
-</div>
-
-<div class="main">
-    <div class="container">
-
-        <div class="main-con">
-            <div class="main-left">
-                <div class="art">
-                    <h1>订单页面</h1>
-                    <p>猫眼电影 09-22 14:56 <img src="../IMG/viewIcon.png" alt="">22448</p>
-                </div>
-
-                <div class="orders-container">
-                    <div class="profile-title">我的订单</div>
-
-
-                    <div class="orders-pager">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-    <div class="mask3">
-        <div class="modal-container" style="display:none">
-            <div class="modal">
-                <span class="icon"></span>
-
-                <p class="tip">您确定要删除该订单嘛？删除后，不可恢复～</p>
-
-                <div class="short btn ok-btn">确定</div>
-                <div class="short btn cancel-btn">取消</div>
-            </div>
-        </div>
-    </div>
-
+<div>
     <table border="1" cellpadding="0" cellspacing="0" width="500">
         <thead>
-        <tr>
-            <th>编号</th>
-            <th>用户编号</th>
-            <th>电影编号</th>
-            <th>日期</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr  name="id" th:each="orders : ${orders}">
-            <td th:text="${orders.oid}"></td>
-            <td th:text="${orders.uid}"></td>
-            <td th:text="${orders.order_time}"></td>
-            <td></td>
-        </tr>
-        </tbody>
-
-    </table>
+             <tr>
+                <th>编号</th>
+                <th>用户姓名</th>
+                <th>电影名称</th>
+                <th>订单日期</th>
+             </tr>
+          </thead>
+         <tbody>
+                <tr name="id" th:each="movie${movies}">
+                    <td th:text="${order.oid}"></td>
+                    <td th:text="${user.user_name}"></td>
+                    <td th:text="${movie.movie_name}></td>
+                    <td th:text="${order.order_time}"></td>
+                    <td></td>
 
 
-
-
-
-
-
-
-
-                <div class="footer">
-                    <div class="container">
-                        <p>&copy;2016猫眼电影 maoyan.com 京ICP证160733号 京ICP备16022489号-1 京公网安备 11010502030881号 网络文化经营许可证电子公告服务规则</p>
-                        <p>北京猫眼文化传媒有限公司</p>
-                    </div>
-
-                </div>
-
-                <div class="cat">
-                    <a href="#"><img src="../IMG/details_cat.png" alt=""></a>
-                </div>
+                </tr>
+          </tbody>
+</table>
+</div>
 
 
 </body>

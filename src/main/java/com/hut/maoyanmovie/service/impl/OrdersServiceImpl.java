@@ -39,7 +39,7 @@ public class OrdersServiceImpl implements OrdersService {
     }
 
     @Override
-    public List<Orders>  getAll() {
+    public List<Orders> getAll() {
         return ordersMapper.getAll();
     }
 }
