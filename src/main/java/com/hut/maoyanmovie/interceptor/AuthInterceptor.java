@@ -28,13 +28,11 @@ public class AuthInterceptor implements HandlerInterceptor {
         }
         HttpSession session = request.getSession();
         // 获取用户信息，如果没有用户信息直接返回提示信息
-        Object userInfo = session.getAttribute("uid");
+        Object userInfo = session.getAttribute("loginUser");
         if (userInfo == null) {
             request.setAttribute("msg","请先登录！");
             request.getRequestDispatcher("logging").forward(request, response);
             return false;
-        } else {
-
         }
 
         return true;

@@ -49,4 +49,10 @@ public class MovieController {
     }
 
 
+    @GetMapping("saveMovie")
+    public String saveMovie(Movie movie){
+    movieService.saveMovie(movie);
+
+        return "redirect:/admin_category_list";
+    }
 }

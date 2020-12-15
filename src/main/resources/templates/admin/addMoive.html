@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="include/admin/adminHeader::html('电影管理')" ></head>
+<body>
+<div th:replace="include/admin/adminNavigator::html" ></div>
+<script>
+    $(function(){
+        var data4Vue = {
+            uri:'categories',
+            beans: []
+        };
+
+        //ViewModel
+        var vue = new Vue({
+            el: '#workingArea',
+            data: data4Vue,
+            mounted:function(){ //mounted　表示这个 Vue 对象加载成功了
+                this.list();
+            },
+            methods: {
+                list:function(){
+                    var url =  this.uri;
+                    axios.get(url).then(function(response) {
+                        vue.beans = response.data;
+                    });
+                }
+            }
+        });
+    });
+
+</script>
+<div id="workingArea" >
+    <h1 class="label label-info" >电影管理</h1>
+</div>
+<div align="center">
+    <form action="saveMovie">
+        电影名称<input type="test" name="movie_name" id="movie_name"><br/>
+        电影类型<input type="test" name="movie_type" id="movie_type"><br/>
+        电影评分<input type="test" name="movie_score" id="movie_score"><br/>
+        电影票房<input type="test" name="movie_money" id="movie_money"><br/>
+        上映时间<input type="test" name="movie_time" id="movie_time"><br/>
+    <input type="submit" value="添加电影">
+    </form>
+</div>
+</body>
+</html>
