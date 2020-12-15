@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="include/admin/adminHeader::html('电影管理')" ></head>
+<body>
+<div th:replace="include/admin/adminNavigator::html" ></div>
+<script>
+    $(function(){
+        var data4Vue = {
+            uri:'categories',
+            beans: []
+        };
+
+        //ViewModel
+        var vue = new Vue({
+            el: '#workingArea',
+            data: data4Vue,
+            mounted:function(){ //mounted　表示这个 Vue 对象加载成功了
+                this.list();
+            },
+            methods: {
+                list:function(){
+                    var url =  this.uri;
+                    axios.get(url).then(function(response) {
+                        vue.beans = response.data;
+                    });
+                }
+            }
+        });
+    });
+
+</script>
+<div id="workingArea" >
+    <h1 class="label label-info" >电影管理</h1>
+</div>
+<div align="center">
+    <form action="updateMovieByid" method="post">
+        电影编号<input type="hidden" name="mid" id="mid" th:value="${movie.mid}"/><br/>
+        电影名称<input type="text"  name="movie_name" id="movie_name" th:value="${movie.movie_name}"><br/>
+        电影类型<input type="text"  name="movie_type" id="movie_type" th:value="${movie.movie_type}"><br/>
+        电影评分<input type="text"  name="movie_score" id="movie_score" th:value="${movie.movie_score}"><br/>
+        电影票房<input type="text"  name="movie_money" id="movie_money" th:value="${movie.movie_money}"><br/>
+        上映时间<input type="text"  name="movie_time" id="movie_time" th:value="${movie.movie_time}"> <br/>
+        <input type="submit" value="修改电影">
+    </form>
+</div>
+</body>
+</html>

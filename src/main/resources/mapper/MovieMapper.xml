@@ -57,8 +57,6 @@
      movie_name=#{movie_name},
      movie_time=#{movie_time},
      movie_type=#{movie_type},
-     movie_information=#{movie_information},
-     movie_region=#{movie_region},
      movie_score=#{movie_score},
      movie_money=#{movie_money}
      where

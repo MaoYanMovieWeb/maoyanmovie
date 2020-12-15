@@ -36,8 +36,8 @@
 
     <insert id="insertOrdersByOid">
         INSERT INTO orders
-        ( oid,uid,mid,order_time) VALUES
-        ( #{oid},#{uid},#{mid},#{order_time})
+        ( uid,mid,order_time) VALUES
+        ( #{uid},#{mid},#{order_time})
     </insert>
 
 
@@ -60,4 +60,5 @@
         WHERE
             u.uid = #{uid} and o.uid = u.uid  AND o.mid = m.mid;
     </select>
+
 </mapper>

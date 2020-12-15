@@ -2,13 +2,13 @@ package com.hut.maoyanmovie.controller;
 
 import com.hut.maoyanmovie.bean.Actor;
 import com.hut.maoyanmovie.bean.Movie;
-import com.hut.maoyanmovie.dao.MovieMapper;
 import com.hut.maoyanmovie.service.ActorService;
 import com.hut.maoyanmovie.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -48,11 +48,30 @@ public class MovieController {
         return "redirect:/admin_category_list";
     }
 
-
     @GetMapping("saveMovie")
     public String saveMovie(Movie movie){
-    movieService.saveMovie(movie);
+        movieService.saveMovie(movie);
+        return "redirect:/admin_category_list";
+    }
+
+    @GetMapping("getMovieById")
+    //根据mid获取电影信息，返回updateMovie页面
+    public String getMovieById(ModelMap modelMap,Integer mid){
+        Movie movie = movieService.getById(mid);
+        modelMap.put("movie",movie);
+        System.out.println(movie);
+        return "/admin/updateMoive";
+
+    }
+
+        @PostMapping("updateMovieByid")
+    public String updateMovieByid(Movie movie){
+            System.out.println("____________________");
+
+        movieService.updateMovie(movie);
 
         return "redirect:/admin_category_list";
     }
+
+
 }

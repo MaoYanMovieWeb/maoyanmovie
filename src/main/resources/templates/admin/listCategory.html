@@ -58,8 +58,7 @@
             <td th:text="${movie.movie_score}"></td>
             <td th:text="${movie.movie_money}"></td>
             <td>
-                <p>修改</p>
-                <p>添加</p>
+                <p><a th:href="@{getMovieById(mid=${movie.mid})}">编辑</a></p>
                 <p><a th:href="@{'deleteMovieById'+'?mid='+${movie.mid}}">删除</a></p>
             </td>
         </tr>

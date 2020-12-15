@@ -12,5 +12,7 @@ public class AdminController {
     @GetMapping("addMoive")
     public String addMoive(){
         return "admin/addMoive";
-    }
+}
+
+
 }

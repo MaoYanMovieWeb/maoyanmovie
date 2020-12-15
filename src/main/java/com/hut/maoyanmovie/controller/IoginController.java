@@ -34,7 +34,7 @@ public class IoginController {
             session.setAttribute("loginUser", user_tel);
             String uid = user.getUid().toString();
             session.setAttribute("uid",uid);
-            System.out.println(session.getAttribute("uid") + "--------------");
+
         } else {
             model.addAttribute("msg", "登录失败！用户名或密码错误！");
         }
