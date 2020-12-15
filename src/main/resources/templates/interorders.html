@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div class="header">
-     <div class="container">
+<div class="header">
+    <div class="container">
         <div class="logo">
             <img src="../img/logo_s.png" alt="">
         </div>
@@ -134,10 +134,8 @@
                 <li><a href="./movie">电影</a></li>
                 <li><a href="./ranking">榜单</a></li>
                 <li><a href="./interview">热点</a></li>
-                <li><a href="./interorders">订单</a></li>
             </ul>
         </div>
-
         <div class="search">
             <form action="getMovieByName">
                 <input type="search" placeholder="找影视剧、影人、影院"
@@ -146,34 +144,52 @@
                 <input type="submit" value="">
             </form>
         </div>
-         <div class="user">
-             <img src="../img/7dd82a16316ab32c8359debdb04396ef2897.png" alt="">
-             <div class="trian">
-             </div>
-             <div class="login">
-                 <a href="./login">登录</a>
-             </div>
-         </div>
+        <div class="user">
+            <img src="../img/7dd82a16316ab32c8359debdb04396ef2897.png" alt="">
+            <div class="trian">
+            </div>
+            <div class="login">
+                <a href="./login">登录</a>
+            </div>
+        </div>
     </div>
 </div>
 
-    <!-- 订单主体页面-->
+<div class="empty">
+</div>
+
+<div align="center">
+    <form action="">
+        <table border="1" cellpadding="0" cellspacing="0" width="500" >
+            <thead>
+            <tr>
+                <th>oid</th>
+                <th>用户昵称</th>
+                <th>电影中文名</th>
+                <th>订单时间</th>
+                <th>操作</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="orders:${orders}">
+                <td th:text="${orders.oid}"></td>
+                <td th:text="${orders.user_name}"></td>
+                <td th:text="${orders.movie_name}"></td>
+                <td th:text="${orders.order_time}"></td>
+                <td>
+                    <p>修改</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
 
 
-<div>
-    <table border="1" cellpadding="0" cellspacing="0" width="500">
-        <thead>
-             <tr>
-                <th>编号</th>
-                <th>用户姓名</th>
-                <th>电影名称</th>
-                <th>订单日期</th>
-             </tr>
-          </thead>
-         <tbody>
 
-          </tbody>
-</table>
+<div class="cat">
+    <a href="#"><img src="../IMG/details_cat.png" alt=""></a>
 </div>
 
 

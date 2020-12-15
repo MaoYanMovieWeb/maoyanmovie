@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
  *
  *新建拦截器
  *
- * 自定义拦截器需要继承HandlerInterceptorAdapter并重写preHandle方法
+ * 自定义拦截器
  */
 public class AuthInterceptor implements HandlerInterceptor {
     @Override
@@ -28,7 +28,7 @@ public class AuthInterceptor implements HandlerInterceptor {
         }
         HttpSession session = request.getSession();
         // 获取用户信息，如果没有用户信息直接返回提示信息
-        Object userInfo = session.getAttribute("loginUser");
+        Object userInfo = session.getAttribute("uid");
         if (userInfo == null) {
             request.setAttribute("msg","请先登录！");
             request.getRequestDispatcher("logging").forward(request, response);

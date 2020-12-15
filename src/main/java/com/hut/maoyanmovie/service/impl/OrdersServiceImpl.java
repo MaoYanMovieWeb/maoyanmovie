@@ -39,6 +39,12 @@ public class OrdersServiceImpl implements OrdersService {
     }
 
     @Override
+    public List<Orders> selectByuid(Integer uid) {
+        return ordersMapper.selectByuid(uid);
+    }
+
+    @Override
+
     public List<Orders> getAll() {
         return ordersMapper.getAll();
     }

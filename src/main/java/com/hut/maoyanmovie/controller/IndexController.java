@@ -48,17 +48,7 @@ public class IndexController {
         return "interview";
     }
 //订单
-    @GetMapping("interorders")
-    public String interorders(ModelMap modelMap){
-        List<User> users = userService.selectAll();
-        List<Movie> movies = movieService.getAll();
-        List<Orders> orders = ordersService.getAll();
-        modelMap.put("users",users);
-        modelMap.put("movies",movies);
-        modelMap.put("orders",orders);
 
-        return "interorders";
-    }
 //登录
     @GetMapping("login")
     public String login(HttpSession session){

@@ -51,4 +51,13 @@
             o.uid = u.uid  AND o.mid = m.mid;
     </select>
 
+    <select id="selectByuid" resultMap="OrdersMapper">
+
+        SELECT
+            o.oid,u.user_name,m.movie_name,o.order_time
+        FROM
+            orders o,user u,movie m
+        WHERE
+            u.uid = #{uid} and o.uid = u.uid  AND o.mid = m.mid;
+    </select>
 </mapper>

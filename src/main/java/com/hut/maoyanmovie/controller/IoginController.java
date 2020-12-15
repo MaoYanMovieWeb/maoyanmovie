@@ -28,11 +28,12 @@ public class IoginController {
             @RequestParam("user_password") String user_password,
             Model model,
             HttpSession session) {
-
         User user = userService.loginUserByTel(user_tel, user_password);
         if (user != null) {
             model.addAttribute("msg","登录成功！ 欢迎你！"+user.getUser_name());
             session.setAttribute("loginUser", user_tel);
+            String uid = user.getUid().toString();
+            session.setAttribute("uid",uid);
         } else {
             model.addAttribute("msg", "登录失败！用户名或密码错误！");
         }

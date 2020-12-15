@@ -1,0 +1,253 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1210px;
+}
+
+.header {
+    height: 80px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d8d8d8;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 300;
+}
+
+.header>.container {
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header>.container .logo {
+    height: 40px;
+    display: inline-block;
+    width: 133px;
+}
+
+.header>.container .position {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+}
+
+.header>.container .position>p {
+    display: inline-block;
+}
+
+.header>.container .position>.trian {
+    width: 10px;
+    height: 5px;
+    /* background-image: url(../../pc图片/img/sprite_webpage.png); */
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: -63px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 7px;
+}
+
+.header>.container .position>.city {
+    width: 400px;
+    height: 300px;
+    background-color: #ffffff;
+    display: none;
+    position: absolute;
+    top: 20px;
+    overflow-y: scroll;
+}
+
+.header>.container .position>.city>.at {
+    border-bottom: 1px solid gray;
+}
+
+.header>.container .position>.city>.other>div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header>.container .position>.city>.other>div>p {
+    margin-right: 30px;
+}
+
+.header>.container .position:hover>.city {
+    display: block;
+}
+
+.header>.container .nav {
+    width: 320px;
+    margin-left: 70px;
+    height: 80px;
+}
+
+.header>.container .nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+
+.header>.container .nav ul li {
+    list-style: none;
+    text-align: center;
+    width: 80px;
+    line-height: 80px;
+}
+
+.header>.container .nav ul li a {
+    width: 80px;
+    height: 80px;
+    display: block;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.header>.container .nav ul li a:hover {
+    color: #ef4238;
+    cursor: pointer;
+}
+
+.header>.container .search {
+    float: right;
+    width: 260px;
+    position: relative;
+    margin-left: 270px;
+}
+
+.header>.container .search input:first-of-type {
+    width: 220px;
+    height: 38px;
+    padding: 0 40px 0 20px;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    background-color: #faf8fa;
+    border-radius: 30px;
+    color: #8f8e8f;
+    outline: none;
+}
+
+.header>.container .search input:last-of-type {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 242px;
+    top: 0;
+    border-radius: 30px;
+    border: none;
+    /* background-image: url(../../pc图片/img/sprite_webpage.png); */
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: -0px;
+    outline: none;
+}
+
+.header>.container .user {
+    width: 56px;
+    height: 80px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.header>.container .user img {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.header>.container .user>.trian {
+    width: 10px;
+    height: 5px;
+    /* background-image: url(../../pc图片/img/sprite_webpage.png); */
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: -63px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 7px;
+}
+
+.header>.container .user>.login {
+    background-color: #ffffff;
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    top: 70px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.header>.container .user:hover>.login {
+    display: block;
+}
+
+.empty {
+    height: 80px;
+}
+
+.movies {
+    width: 268px;
+    height: 375px;
+}
+
+.movie-box {
+    position: relative;
+}
+
+.movie-face {
+    position: absolute;
+    opacity: 1;
+}
+
+.movie-info {
+    transition: all 1s;
+    transform: scale(0);
+    opacity: 0;
+    position: absolute;
+    z-index: 10;
+    width: 268px;
+    margin: 0 auto;
+}
+
+.movie-box:hover {
+    cursor: pointer;
+}
+
+.movie-box:hover .movie-info {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.movie-box:hover .movie-face {
+    transition: all 1s;
+    opacity: 0.6;
+}
+
+.movie-info ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 375px;
+    color: #ef4238;
+}
+
+.movie-info li {
+    list-style: none;
+    text-align: center;
+    font-size: 24px;
+}

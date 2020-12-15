@@ -26,4 +26,5 @@ public interface OrdersMapper {
     //关联查询
     List<Orders> getAll();       //根据订单ID查询
 
+    List<Orders> selectByuid (Integer uid);
 }

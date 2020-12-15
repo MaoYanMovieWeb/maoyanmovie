@@ -6,7 +6,7 @@
 
     <select id="loginUserByTel" resultType="com.hut.maoyanmovie.bean.User">
         SELECT
-        *
+        uid,user_name,user_tel,user_password
         FROM
         user
         WHERE

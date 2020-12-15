@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./CSS/jump.css">
     <link rel="stylesheet" href="../CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/interview.css">
+
 </head>
 
 <body>
     <div class="header">
         <div class="container">
             <div class="logo">
-                <img src="../img/logo_s.png" alt="">
+                <!-- <img src="../img/logo_s.png" alt=""> -->
             </div>
             <div class="position">
                 <p>成都</p>
@@ -138,55 +140,76 @@
             </div>
             <div class="search">
                 <form action="getMovieByName">
-                    <input type="search" placeholder="找影视剧、影人、影院"
-
-                           id="movie_name" name="movie_name">
+                    <input type="search" placeholder="找影视剧、影人、影院" id="movie_name" name="movie_name">
                     <input type="submit" value="">
                 </form>
             </div>
-            <div class="user">
+            <!-- <div class="user">
                 <img src="../img/7dd82a16316ab32c8359debdb04396ef2897.png" alt="">
                 <div class="trian">
                 </div>
                 <div class="login">
-                    <a href="./login">登录</a>
+                    <a href="./login.html">登录</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
     <div class="empty">
     </div>
 
-    <div >
+    <!-- <div class="movie">
         <table border="1" cellpadding="0" cellspacing="0" width="500">
             <thead>
-            <tr>
-                <th>ID</th>
-                <th>电影名</th>
-                <th>类型</th>
-                <th>上映时间</th>
-                <th>电影封面</th>
-            </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>电影名</th>
+                    <th>类型</th>
+                    <th>上映时间</th>
+                    <th>电影封面</th>
+                </tr>
             </thead>
             <tbody>
-            <form action="">
-            <tr th:each="mov: ${movies}" name="id">
-                <td th:text="${mov.mid}" th:value="${mov.mid}"></td>
-                <td ><a th:href="@{./getById(mid=${mov.mid})}" th:text="${mov.movie_name}"></a></td>
-                <td th:text="${mov.movie_type}"></td>
-                <td th:text="${mov.movie_time}"></td>
-                <td><a th:href="@{./getById(mid=${mov.mid})}"> <img th:src="${mov.movie_photo}"/> </a></td>
-            </tr>
-            </form>
+                <form action="">
+                    <tr th:each="mov: ${movies}" name="id">
+                        <td th:text="${mov.mid}" th:value="${mov.mid}"></td>
+                        <td>
+                            <a th:href="@{./getById(mid=${mov.mid})}" th:text="${mov.movie_name}"></a>
+                        </td>
+                        <td th:text="${mov.movie_type}"></td>
+                        <td th:text="${mov.movie_time}"></td>
+                        <td>
+                            <a th:href="@{./getById(mid=${mov.mid})}"> <img th:src="${mov.movie_photo}" /> </a>
+                        </td>
+                    </tr>
+                </form>
+
             </tbody>
         </table>
+    </div> -->
+
+    <div class="movies">
+        <div class="movie-box">
+            <div class="movie-face">
+                <img src="./IMG/如果声音不记得.jpg" alt="">
+            </div>
+            <div class="movie-info">
+                <ul>
+                    <li class="movie-id">1</li>
+                    <li class="movie-name">如果声音不记得</li>
+                    <li class="movie-type">爱情</li>
+                    <li class="movie-date">2020-12-11</li>
+                </ul>
+            </div>
+
+        </div>
+
     </div>
 
-    
+
 
     <div class="cat">
-        <a href="#"><img src="../IMG/details_cat.png" alt=""></a>
+        <!-- <a href="#"><img src="../IMG/details_cat.png" alt=""></a> -->
     </div>
 
 

@@ -20,4 +20,5 @@ public interface OrdersService {
 
     List<Orders> getAll();
 
+    List<Orders> selectByuid (Integer uid);
 }
