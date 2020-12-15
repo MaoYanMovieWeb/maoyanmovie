@@ -71,4 +71,5 @@
         from
             movie
     </select>
+
 </mapper>

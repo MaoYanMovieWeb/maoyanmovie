@@ -40,4 +40,13 @@ public class MovieController {
         modelMap.put("movies",movies);
         return "jump";
     }
+
+    @GetMapping ("/deleteMovieById")
+    public String delMovie(Integer mid){
+        movieService.deleteMovieById(mid);
+
+        return "redirect:/admin_category_list";
+    }
+
+
 }
