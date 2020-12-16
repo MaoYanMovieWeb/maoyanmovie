@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -32,12 +33,12 @@ public class OrdersController {
     MovieService movieService;
 
     @GetMapping("interorders")
-    public String interorders(ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) throws IOException {
-        List<User> users = userService.selectAll();
-        List<Movie> movies = movieService.getAll();
-        List<Orders> orders = ordersService.getAll();
-        modelMap.put("users",users);
-        modelMap.put("movies",movies);
+    public String interorders(ModelMap modelMap, HttpSession session) {
+        Integer uid = Integer.parseInt(session.getAttribute("uid").toString());
+
+
+        List<Orders> orders = ordersService.selectByuid(uid);
+
         modelMap.put("orders",orders);
         return "interorders";
     }
