@@ -21,7 +21,7 @@ public interface OrdersMapper {
 
     void delOrdersByOid(Integer oid);              //删除订单
 
-    void insertOrdersByOid(Orders order);               //添加订单
+    void insertOrdersByOid(Integer uid,Integer mid,String order_time);               //添加订单
 
     //关联查询
     List<Orders> getAll();       //根据订单ID查询

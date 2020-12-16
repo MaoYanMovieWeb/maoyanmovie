@@ -1,8 +1,6 @@
 package com.hut.maoyanmovie.controller;
 
-import com.hut.maoyanmovie.bean.Movie;
 import com.hut.maoyanmovie.bean.Orders;
-import com.hut.maoyanmovie.bean.User;
 import com.hut.maoyanmovie.service.MovieService;
 import com.hut.maoyanmovie.service.OrdersService;
 import com.hut.maoyanmovie.service.UserService;
@@ -12,10 +10,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -35,10 +33,7 @@ public class OrdersController {
     @GetMapping("interorders")
     public String interorders(ModelMap modelMap, HttpSession session) {
         Integer uid = Integer.parseInt(session.getAttribute("uid").toString());
-
-
         List<Orders> orders = ordersService.selectByuid(uid);
-
         modelMap.put("orders",orders);
         return "interorders";
     }
@@ -64,4 +59,15 @@ public class OrdersController {
         return "redirect:/admin_order_list";
     }
 
+    @GetMapping("insertOrdersByOid")
+    public String insertOrdersByOid(HttpSession session){
+        Integer uid = Integer.parseInt(session.getAttribute("uid").toString());
+        Integer mid = Integer.parseInt(session.getAttribute("mid").toString());
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(formatter.format(date));
+        String order_time = formatter.format(date);
+        ordersService.insertOrdersByOid(uid, mid, order_time);
+        return "redirect:/interorders";
+    }
 }

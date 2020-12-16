@@ -10,6 +10,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -26,9 +27,10 @@ public class MovieController {
     ActorService actorService;
 
     @GetMapping("/getById")
-    public String intro(ModelMap modelMap,Integer mid){
+    public String intro(ModelMap modelMap, Integer mid, HttpSession session){
         Movie movies=movieService.getById(mid);
         Actor actor=actorService.getActor(mid);
+        session.setAttribute("mid",mid);
         modelMap.put("movies",movies);
         modelMap.put("actor",actor);
         return "intro";
