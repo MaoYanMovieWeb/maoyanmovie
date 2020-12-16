@@ -15,7 +15,7 @@ import java.util.List;
 
 public interface OrdersMapper {
 
-    List<Orders> getOrdersByOid(Integer oid);   //查询订单
+    Orders getOrdersByOid(Integer oid);   //查询订单
 
     void editOrdersByOid(Orders order);        //修改订单
 

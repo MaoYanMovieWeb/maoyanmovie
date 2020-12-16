@@ -31,17 +31,15 @@
 
 </script>
 <div id="workingArea" >
-    <h1 class="label label-info" >电影管理</h1>
+    <h1 class="label label-info" >订单管理</h1>
 </div>
 <div align="center">
-    <form action="updateMovieByid" method="post">
-        电影编号<span th:text="${movie.mid}"/><input type="hidden" name="mid" id="mid" th:value="${movie.mid}"/><br/>
-        电影名称<input type="text"  name="movie_name" id="movie_name" th:value="${movie.movie_name}"><br/>
-        电影类型<input type="text"  name="movie_type" id="movie_type" th:value="${movie.movie_type}"><br/>
-        电影评分<input type="text"  name="movie_score" id="movie_score" th:value="${movie.movie_score}"><br/>
-        电影票房<input type="text"  name="movie_money" id="movie_money" th:value="${movie.movie_money}"><br/>
-        上映时间<input type="text"  name="movie_time" id="movie_time" th:value="${movie.movie_time}"> <br/>
-        <input type="submit" value="修改电影">
+    <form action="editOrdersByOid" method="post">
+        订单编号<span th:text="${orders.oid}"/><input type="hidden" name="oid" id="oid" th:value="${orders.oid}"/><br/>
+        用户编号<input type="text"  name="uid" id="uid" th:value="${orders.uid}"><br/>
+        电影编号<input type="text"  name="mid" id="mid" th:value="${orders.mid}"><br/>
+        订单时间<input type="text"  name="order_time" id="order_time" th:value="${orders.order_time}"><br/>
+        <input type="submit" value="修改订单">
     </form>
 </div>
 </body>

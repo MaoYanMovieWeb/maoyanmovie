@@ -66,10 +66,7 @@ public class MovieController {
 
         @PostMapping("updateMovieByid")
     public String updateMovieByid(Movie movie){
-            System.out.println("____________________");
-
         movieService.updateMovie(movie);
-
         return "redirect:/admin_category_list";
     }
 

@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface OrdersService {
 
-    List<Orders> getOrdersByOid(Integer oid);
+    Orders getOrdersByOid(Integer oid);
 
     void editOrdersByOid(Orders order);
 

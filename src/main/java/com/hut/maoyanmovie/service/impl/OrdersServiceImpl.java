@@ -19,7 +19,7 @@ public class OrdersServiceImpl implements OrdersService {
    private OrdersMapper ordersMapper;
 
     @Override
-    public List<Orders> getOrdersByOid(Integer oid) {
+    public Orders getOrdersByOid(Integer oid) {
         return ordersMapper.getOrdersByOid(oid);
     }
 
