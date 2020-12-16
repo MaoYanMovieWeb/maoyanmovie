@@ -84,7 +84,8 @@
             <td th:text="${orders.movie_name}"></td>
             <td th:text="${orders.order_time}"></td>
             <td>
-                <p>修改</p>
+                <p><a th:href="@{'delOrdersByOid'+'?oid='+${orders.oid}}">删除</a></p>
+
             </td>
         </tr>
         </tbody>

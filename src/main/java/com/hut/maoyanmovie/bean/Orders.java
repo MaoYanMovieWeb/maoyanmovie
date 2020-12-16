@@ -15,6 +15,17 @@ public class Orders implements java.io.Serializable{
     private String user_name;
     private String movie_name;
 
+    public Orders(Integer oid, Integer uid, Integer mid, String order_time, String user_name, String movie_name) {
+        this.oid = oid;
+        this.uid = uid;
+        this.mid = mid;
+        this.order_time = order_time;
+        this.user_name = user_name;
+        this.movie_name = movie_name;
+    }
+
+
+
     public String getUser_name() {
         return user_name;
     }
@@ -80,7 +91,8 @@ public class Orders implements java.io.Serializable{
                 ", uid=" + uid +
                 ", mid=" + mid +
                 ", order_time='" + order_time + '\'' +
+                ", user_name='" + user_name + '\'' +
+                ", movie_name='" + movie_name + '\'' +
                 '}';
     }
-
 }
