@@ -151,7 +151,7 @@
             <div class="trian">
             </div>
             <div class="login">
-                <a href="./login">登录</a>
+                <a href="./login" th:text="${session.user_name}==null?'登录':${session.user_name}"></a>
             </div>
         </div>
     </div>

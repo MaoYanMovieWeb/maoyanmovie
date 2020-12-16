@@ -35,7 +35,7 @@
 </div>
 <div align="center">
     <form action="updateMovieByid" method="post">
-        电影编号<span th:text="${movie.mid}"/><input type="hidden" name="mid" id="mid" th:value="${movie.mid}"/><br/>
+        电影编号：<span th:text="${movie.mid}"/><input type="hidden" name="mid" id="mid" th:value="${movie.mid}"/><br/>
         电影名称<input type="text"  name="movie_name" id="movie_name" th:value="${movie.movie_name}"><br/>
         电影类型<input type="text"  name="movie_type" id="movie_type" th:value="${movie.movie_type}"><br/>
         电影评分<input type="text"  name="movie_score" id="movie_score" th:value="${movie.movie_score}"><br/>

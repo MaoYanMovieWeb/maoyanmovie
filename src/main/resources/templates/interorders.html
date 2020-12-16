@@ -150,7 +150,7 @@
             <div class="trian">
             </div>
             <div class="login">
-                <a href="./login">登录</a>
+                <a href="./login" th:text="${session.user_name}==null?'登录':${session.user_name}"></a>
             </div>
         </div>
     </div>
@@ -160,9 +160,38 @@
 </div>
 
 <div align="center">
-    <form action="">
-        <table border="1" cellpadding="0" cellspacing="0" width="500" >
-            <thead>
+        <style>
+            .table11_6 table {
+                width:100%;
+                margin:15px 0;
+                border:0;
+            }
+            .table11_6 th {
+                background-color:#96C7ED;
+                color:#000000
+            }
+            .table11_6,.table11_6 th,.table11_6 td {
+                font-size:0.95em;
+                text-align:center;
+                padding:4px;
+                border-collapse:collapse;
+            }
+            .table11_6 th,.table11_6 td {
+                border: 1px solid #73b4e7;
+                border-width:1px 0 1px 0;
+                border:2px inset #ffffff;
+            }
+            .table11_6 tr {
+                border: 1px solid #ffffff;
+            }
+            .table11_6 tr:nth-child(odd){
+                background-color:#dcecf9;
+            }
+            .table11_6 tr:nth-child(even){
+                background-color:#ffffff;
+            }
+        </style>
+        <table class=table11_6>
             <tr>
                 <th>oid</th>
                 <th>用户昵称</th>
@@ -170,10 +199,7 @@
                 <th>影院名称</th>
                 <th>订单时间</th>
                 <th>操作</th>
-
             </tr>
-            </thead>
-            <tbody>
             <tr th:each="orders:${orders}">
                 <td th:text="${orders.oid}"></td>
                 <td th:text="${orders.user_name}"></td>
@@ -184,7 +210,6 @@
                     <p>修改</p>
                 </td>
             </tr>
-            </tbody>
         </table>
     </form>
 </div>

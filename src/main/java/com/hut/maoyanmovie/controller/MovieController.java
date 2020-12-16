@@ -61,7 +61,6 @@ public class MovieController {
     public String getMovieById(ModelMap modelMap,Integer mid){
         Movie movie = movieService.getById(mid);
         modelMap.put("movie",movie);
-        System.out.println(movie);
         return "/admin/updateMoive";
 
     }

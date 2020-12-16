@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -26,9 +26,10 @@
                 <input type="text" class="input" id="user_tel" name="user_tel"><br/>
                 <span>注册成功后，全美团通用</span><br/>
                     用户昵称<input type="text" class="input" id="user_name" name="user_name"><br/>
+                <span>用户名最多6个字</span><br/>
                     创建密码<input type="password" class="input" id="user_password" name="user_password"><br/>
                     确认密码<input type="password" class="input" id="user_repassword" name="user_repassword"><br/>
-
+                <span>创建密码和确认密码必须一致</span><br/>
                 <div class="agree">
                     <input type="submit" value="同意以下协议并注册">
                 </div>
