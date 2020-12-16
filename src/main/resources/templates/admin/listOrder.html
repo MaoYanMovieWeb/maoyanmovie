@@ -72,6 +72,7 @@
             <th>oid</th>
             <th>用户昵称</th>
             <th>电影中文名</th>
+            <th>影院名称</th>
             <th>订单时间</th>
             <th>操作</th>
 
@@ -82,6 +83,7 @@
             <td th:text="${orders.oid}"></td>
             <td th:text="${orders.user_name}"></td>
             <td th:text="${orders.movie_name}"></td>
+            <td th:text="${orders.cinema_name}"></td>
             <td th:text="${orders.order_time}"></td>
             <td>
                 <p><a th:href="@{getOrdersByOid(oid=${orders.oid})}">编辑</a></p>

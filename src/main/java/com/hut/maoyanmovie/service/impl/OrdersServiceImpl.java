@@ -34,8 +34,8 @@ public class OrdersServiceImpl implements OrdersService {
     }
 
     @Override
-    public void insertOrdersByOid(Integer uid,Integer mid,String order_time) {
-        ordersMapper.insertOrdersByOid(uid, mid, order_time);
+    public void insertOrdersByOid(Integer uid, Integer mid, Integer cid, String order_time) {
+        ordersMapper.insertOrdersByOid(uid, mid, cid,order_time);
     }
 
     @Override

@@ -16,7 +16,7 @@ public interface OrdersService {
 
     void delOrdersByOid(Integer oid);
 
-    void insertOrdersByOid(Integer uid,Integer mid,String order_time);
+    void insertOrdersByOid(Integer uid,Integer mid,Integer cid,String order_time);
 
     List<Orders> getAll();
 

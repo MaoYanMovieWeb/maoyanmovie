@@ -2,7 +2,7 @@ package com.hut.maoyanmovie.dao;
 
 import com.hut.maoyanmovie.bean.Orders;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
+
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public interface OrdersMapper {
 
     void delOrdersByOid(Integer oid);              //删除订单
 
-    void insertOrdersByOid(Integer uid,Integer mid,String order_time);               //添加订单
+    void insertOrdersByOid( Integer uid, Integer mid, Integer cid,String order_time);               //添加订单
 
     //关联查询
     List<Orders> getAll();       //根据订单ID查询

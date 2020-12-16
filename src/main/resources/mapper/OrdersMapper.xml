@@ -8,12 +8,13 @@
         <id property="oid" column="oid"/>
         <result property="uid" column="uid"/>
         <result property="mid" column="mid"/>
+        <result property="cid" column="cid"/>
         <result property="order_time" column="order_time"/>
     </resultMap>
 
     <select id="getOrdersByOid" resultMap="OrdersMapper">
         select
-            oid,uid,mid,order_time
+            oid,uid,mid,cid,order_time
         from
             orders
         where
@@ -25,6 +26,7 @@
         SET
             uid=#{uid},
             mid=#{mid},
+            cid=#{cid},
             order_time=#{order_time}
         WHERE
             oid=#{oid};
@@ -36,29 +38,29 @@
 
     <insert id="insertOrdersByOid">
         INSERT INTO orders
-        ( uid,mid,order_time) VALUES
-        ( #{uid},#{mid},#{order_time})
+        ( uid,mid,cid,order_time) VALUES
+        ( #{uid},#{mid},#{cid},#{order_time})
     </insert>
 
 
     <select id="getAll" resultMap="OrdersMapper">
 
         SELECT
-            o.oid,u.user_name,m.movie_name,o.order_time
+            o.oid,u.user_name,m.movie_name,o.order_time,c.cinema_name
         FROM
-            orders o,user u,movie m
+            orders o,user u,movie m,cinema c
         WHERE
-            o.uid = u.uid  AND o.mid = m.mid;
+            o.uid = u.uid  AND o.mid = m.mid AND o.cid = c.cid;
     </select>
 
     <select id="selectByuid" resultMap="OrdersMapper">
 
         SELECT
-            o.oid,u.user_name,m.movie_name,o.order_time
+            o.oid,u.user_name,m.movie_name,o.order_time,c.cinema_name
         FROM
-            orders o,user u,movie m
+            orders o,user u,movie m,cinema c
         WHERE
-            u.uid = #{uid} and o.uid = u.uid  AND o.mid = m.mid;
+            u.uid = #{uid} and o.uid = u.uid  AND o.mid = m.mid AND o.cid = c.cid
     </select>
 
 </mapper>

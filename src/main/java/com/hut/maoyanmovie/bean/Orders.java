@@ -11,20 +11,52 @@ public class Orders implements java.io.Serializable{
     private Integer oid;
     private Integer uid;
     private Integer mid;
+    private Integer cid;
     private String order_time;
     private String user_name;
     private String movie_name;
+    private String cinema_name;
 
-    public Orders(Integer oid, Integer uid, Integer mid, String order_time, String user_name, String movie_name) {
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "oid=" + oid +
+                ", uid=" + uid +
+                ", mid=" + mid +
+                ", cid=" + cid +
+                ", order_time='" + order_time + '\'' +
+                ", user_name='" + user_name + '\'' +
+                ", movie_name='" + movie_name + '\'' +
+                ", cinema_name='" + cinema_name + '\'' +
+                '}';
+    }
+
+    public Orders(Integer oid, Integer uid, Integer mid, Integer cid, String order_time, String user_name, String movie_name, String cinema_name) {
         this.oid = oid;
         this.uid = uid;
         this.mid = mid;
+        this.cid = cid;
         this.order_time = order_time;
         this.user_name = user_name;
         this.movie_name = movie_name;
+        this.cinema_name = cinema_name;
     }
 
+    public String getCinema_name() {
+        return cinema_name;
+    }
 
+    public void setCinema_name(String cinema_name) {
+        this.cinema_name = cinema_name;
+    }
+
+    public Integer getCid() {
+        return cid;
+    }
+
+    public void setCid(Integer cid) {
+        this.cid = cid;
+    }
 
     public String getUser_name() {
         return user_name;
@@ -45,12 +77,6 @@ public class Orders implements java.io.Serializable{
     public Orders() {
     }
 
-    public Orders(Integer oid, Integer uid, Integer mid, String order_time) {
-        this.oid = oid;
-        this.uid = uid;
-        this.mid = mid;
-        this.order_time = order_time;
-    }
 
     public Integer getOid() {
         return oid;
@@ -84,15 +110,5 @@ public class Orders implements java.io.Serializable{
         this.order_time = order_time;
     }
 
-    @Override
-    public String toString() {
-        return "Orders{" +
-                "oid=" + oid +
-                ", uid=" + uid +
-                ", mid=" + mid +
-                ", order_time='" + order_time + '\'' +
-                ", user_name='" + user_name + '\'' +
-                ", movie_name='" + movie_name + '\'' +
-                '}';
-    }
+
 }

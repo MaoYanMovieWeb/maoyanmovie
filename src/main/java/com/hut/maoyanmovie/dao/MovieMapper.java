@@ -2,7 +2,7 @@ package com.hut.maoyanmovie.dao;
 
 import com.hut.maoyanmovie.bean.Movie;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
+
 
 import java.util.List;
 

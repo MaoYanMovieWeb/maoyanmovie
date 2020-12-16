@@ -59,15 +59,5 @@ public class OrdersController {
         return "redirect:/admin_order_list";
     }
 
-    @GetMapping("insertOrdersByOid")
-    public String insertOrdersByOid(HttpSession session){
-        Integer uid = Integer.parseInt(session.getAttribute("uid").toString());
-        Integer mid = Integer.parseInt(session.getAttribute("mid").toString());
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println(formatter.format(date));
-        String order_time = formatter.format(date);
-        ordersService.insertOrdersByOid(uid, mid, order_time);
-        return "redirect:/interorders";
-    }
+
 }

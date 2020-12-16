@@ -164,24 +164,20 @@
         <table border="1" cellpadding="0" cellspacing="0" width="500" >
             <thead>
             <tr>
-                <th>oid</th>
-                <th>用户昵称</th>
-                <th>电影中文名</th>
+                <th>cid</th>
                 <th>影院名称</th>
-                <th>订单时间</th>
+                <th>影院地址</th>
                 <th>操作</th>
 
             </tr>
             </thead>
             <tbody>
-            <tr th:each="orders:${orders}">
-                <td th:text="${orders.oid}"></td>
-                <td th:text="${orders.user_name}"></td>
-                <td th:text="${orders.movie_name}"></td>
-                <td th:text="${orders.cinema_name}"></td>
-                <td th:text="${orders.order_time}"></td>
+            <tr th:each="cinemas:${cinemas}">
+                <td th:text="${cinemas.cid}"></td>
+                <td th:text="${cinemas.cinema_name}"></td>
+                <td th:text="${cinemas.cinema_address}"></td>
                 <td>
-                    <p>修改</p>
+                    <p><a th:href="@{Getcid(cid=${cinemas.cid})}">选择</a></p>
                 </td>
             </tr>
             </tbody>
