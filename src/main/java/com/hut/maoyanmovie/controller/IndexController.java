@@ -1,5 +1,7 @@
 package com.hut.maoyanmovie.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.hut.maoyanmovie.bean.Movie;
 import com.hut.maoyanmovie.bean.Orders;
 import com.hut.maoyanmovie.bean.User;
@@ -10,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 import javax.servlet.http.HttpSession;
@@ -96,35 +99,44 @@ public class IndexController {
     }
 
     @GetMapping(value="/admin_category_list")
-    public String listCategory(ModelMap modelMap){
-        List<User> users = userService.selectAll();
+    public String listCategory(ModelMap modelMap,@RequestParam(defaultValue = "1", value = "pageNum")Integer pageNum){
+        PageHelper.startPage(pageNum, 5);
+
         List<Movie> movies = movieService.getAll();
-        List<Orders> orders = ordersService.getAll();
-        modelMap.put("users",users);
+
+        PageInfo<Movie> pageInfo = new PageInfo<>(movies);
+
         modelMap.put("movies",movies);
-        modelMap.put("orders",orders);
+
+        modelMap.put("pageInfo",pageInfo);
         return "admin/listCategory";
     }
 
     @GetMapping("/admin_user_list")
-    public String listUser(ModelMap modelMap){
+    public String listUser(ModelMap modelMap,@RequestParam(defaultValue = "1", value = "pageNum")Integer pageNum){
+        PageHelper.startPage(pageNum, 5);
+
         List<User> users = userService.selectAll();
-        List<Movie> movies = movieService.getAll();
-        List<Orders> orders = ordersService.getAll();
+
         modelMap.put("users",users);
-        modelMap.put("movies",movies);
-        modelMap.put("orders",orders);
+
+        PageInfo<User> pageInfo = new PageInfo<>(users);
+
+        modelMap.put("pageInfo",pageInfo);
         return "/admin/listUser";
     }
 
     @GetMapping("/admin_order_list")
-    public String listOrder(ModelMap modelMap){
+    public String listOrder(ModelMap modelMap,@RequestParam(defaultValue = "1", value = "pageNum")Integer pageNum){
+        PageHelper.startPage(pageNum, 2);
         List<User> users = userService.selectAll();
         List<Movie> movies = movieService.getAll();
         List<Orders> orders = ordersService.getAll();
         modelMap.put("users",users);
         modelMap.put("movies",movies);
         modelMap.put("orders",orders);
+        PageInfo<Orders> pageInfo = new PageInfo<>(orders);
+        modelMap.put("pageInfo",pageInfo);
         return "/admin/listOrder";
     }
 

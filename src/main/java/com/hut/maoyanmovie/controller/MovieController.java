@@ -1,5 +1,7 @@
 package com.hut.maoyanmovie.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.hut.maoyanmovie.bean.Actor;
 import com.hut.maoyanmovie.bean.Movie;
 import com.hut.maoyanmovie.service.ActorService;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -37,9 +40,12 @@ public class MovieController {
     }
 
     @GetMapping("/getMovieByName")
-    public String getName(ModelMap modelMap,String movie_name){
+    public String getName(ModelMap modelMap,String movie_name,@RequestParam(defaultValue = "1", value = "pageNum")Integer pageNum){
+        PageHelper.startPage(pageNum, 5);
         List<Movie> movies=movieService.getMovieByName(movie_name);
+        PageInfo<Movie> pageInfo = new PageInfo<>(movies);
         modelMap.put("movies",movies);
+        modelMap.put("pageInfo",pageInfo);
         return "jump";
     }
 

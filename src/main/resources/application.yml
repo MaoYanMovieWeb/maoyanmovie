@@ -10,7 +10,17 @@ mybatis:
   mapper-locations: mapper/*.xml
   type-aliases-package: com.hut.maoyanmovie.bean
 
+mapper:
+  mappers:
+    - com.hut.maoyanmovie.util.MyMapper
+  not-empty: false
+  identity: MYSQL
 
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
 
 
 
