@@ -147,6 +147,7 @@
                 <input type="submit" value="">
                 </form>
             </div>
+
             <div class="user">
                 <img th:src="${session.user_name}==null?'/../img/7dd82a16316ab32c8359debdb04396ef2897.png':'/../img/2e55c40fcd500636dbf3c1112d319774478546.jpg'">
                 <div class="trian">
@@ -155,6 +156,7 @@
                     <a href="./login" th:text="${session.user_name}==null?'登录':${session.user_name}"></a>
                 </div>
             </div>
+
         </div>
     </div>
 
