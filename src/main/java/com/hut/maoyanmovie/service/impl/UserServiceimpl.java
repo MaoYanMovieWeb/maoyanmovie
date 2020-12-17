@@ -48,4 +48,8 @@ public class UserServiceimpl implements UserService {
         return userMapper.save_myself(uid);
     }
 
+    @Override
+    public void uploaduser_photo(Integer uid, String user_photo) {
+        userMapper.uploaduser_photo(uid, user_photo);
+    }
 }

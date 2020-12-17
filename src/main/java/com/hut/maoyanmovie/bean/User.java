@@ -9,6 +9,15 @@ public class User {
     private String user_name;
     private String user_password;
     private String user_tel;
+    private String user_photo;
+
+    public String getUser_photo() {
+        return user_photo;
+    }
+
+    public void setUser_photo(String user_photo) {
+        this.user_photo = user_photo;
+    }
 
     public Integer getUid() {
         return uid;
@@ -49,6 +58,7 @@ public class User {
                 ", user_name='" + user_name + '\'' +
                 ", user_password='" + user_password + '\'' +
                 ", user_tel='" + user_tel + '\'' +
+                ", user_photo='" + user_photo + '\'' +
                 '}';
     }
 

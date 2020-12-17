@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>猫眼电影</title>
         <link rel="stylesheet" href="../CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/intro.css">
 </head>
@@ -146,7 +146,7 @@
                 </form>
             </div>
             <div class="user">
-                <img src="../img/7dd82a16316ab32c8359debdb04396ef2897.png" alt="">
+                <img th:src="${session.user_photo}==null?'/../img/7dd82a16316ab32c8359debdb04396ef2897.png':${session.user_photo}">
                 <div class="trian">
                 </div>
                 <div class="login">

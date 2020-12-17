@@ -19,7 +19,9 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         //注册自己的拦截器并设置拦截的请求路径
         registry.addInterceptor(new AuthInterceptor())
                 .addPathPatterns("/interorders/**")
-                .addPathPatterns("/Getcid/**")//拦截的路径 Getcid
+                .addPathPatterns("/Getcid/**")
+                .addPathPatterns("/add/**")
+                .addPathPatterns("/upload/**")//拦截的路径 Getcid add upload
                 .excludePathPatterns(""); //排除的路径
     }
 

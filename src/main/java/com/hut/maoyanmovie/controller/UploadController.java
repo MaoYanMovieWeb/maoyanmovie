@@ -1,6 +1,10 @@
 package com.hut.maoyanmovie.controller;
 
+import com.hut.maoyanmovie.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,6 +21,8 @@ import java.io.IOException;
 @Controller
 public class UploadController {
 
+    @Autowired
+    UserService userService;
     @GetMapping("/add")
     public String toUpload() {
         return "upload";
@@ -32,6 +38,7 @@ public class UploadController {
         if (!uploadFilePath.exists()) {
             uploadFilePath.mkdir();
         }
+
         //  3、重命名
         String fileName = file.getOriginalFilename();
 
@@ -45,6 +52,13 @@ public class UploadController {
         //  4、上传
         file.transferTo(destFile);
         //  5、返回上传路径
+
+        //上传到对应uid
+        String user_photo = "upload/"+newFileName;
+        Integer uid = Integer.parseInt(session.getAttribute("uid").toString());
+        userService.uploaduser_photo(uid,user_photo);
+
+        session.setAttribute("user_photo",user_photo);
         return "uploadSuccess";
     }
 

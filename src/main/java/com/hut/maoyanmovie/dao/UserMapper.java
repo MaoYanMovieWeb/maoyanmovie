@@ -24,4 +24,6 @@ public interface UserMapper {
     List<User> selectAll ();
 
     Integer save_myself (Integer uid);
+
+    void uploaduser_photo (Integer uid , String user_photo);
 }
