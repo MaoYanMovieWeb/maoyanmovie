@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>猫眼电影</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/interview.css">
+
 </head>
 
 <body>
@@ -16,7 +18,7 @@
             <img src="../img/logo_s.png" alt="">
         </div>
         <div class="position">
-            <p>成都</p>
+            <p></p>
             <div class="trian">
             </div>
             <div class="city">
@@ -161,38 +163,7 @@
 
 <div align="center">
     <form action="">
-        <style>
-            .table11_6 table {
-                width:100%;
-                margin:15px 0;
-                border:0;
-            }
-            .table11_6 th {
-                background-color:#96C7ED;
-                color:#000000
-            }
-            .table11_6,.table11_6 th,.table11_6 td {
-                font-size:0.95em;
-                text-align:center;
-                padding:4px;
-                border-collapse:collapse;
-            }
-            .table11_6 th,.table11_6 td {
-                border: 1px solid #73b4e7;
-                border-width:1px 0 1px 0;
-                border:2px inset #ffffff;
-            }
-            .table11_6 tr {
-                border: 1px solid #ffffff;
-            }
-            .table11_6 tr:nth-child(odd){
-                background-color:#dcecf9;
-            }
-            .table11_6 tr:nth-child(even){
-                background-color:#ffffff;
-            }
-        </style>
-        <table class=table11_6>
+        <table class="table">
             <tr>
                 <th>cid</th>
                 <th>影院名称</th>
@@ -200,11 +171,11 @@
                 <th>操作</th>
             </tr>
             <tr th:each="cinemas:${cinemas}">
-                <td th:text="${cinemas.cid}"></td>
-                <td th:text="${cinemas.cinema_name}"></td>
-                <td th:text="${cinemas.cinema_address}"></td>
-                <td>
-                    <p><a th:href="@{Getcid(cid=${cinemas.cid})}">选择</a></p>
+                <td class="active" th:text="${cinemas.cid}"></td>
+                <td class="success" th:text="${cinemas.cinema_name}"></td>
+                <td class="warning" th:text="${cinemas.cinema_address}"></td>
+                <td class="danger">
+                    <p><a th:href="@{Getcid(cid=${cinemas.cid})}">确认</a></p>
                 </td>
             </tr>
         </table>
@@ -216,8 +187,8 @@
 <div class="cat">
     <a href="#"><img src="../IMG/details_cat.png" alt=""></a>
 </div>
-
-
+<script src="../bootstrap/jquery.min.js"></script>
+<script src="../bootstrap/bootstrap.min.js"></script>
 </body>
 
 </html>

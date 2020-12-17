@@ -92,11 +92,12 @@
 </form>
     <h1><a href="addMoive">添加电影</a></h1>
 </div>
-
+<div align="center">
 <p>当前 <span th:text="${pageInfo.pageNum}"></span> 页,总 <span th:text="${pageInfo.pages}"></span> 页,共 <span th:text="${pageInfo.total}"></span> 条记录</p>
 <a th:href="@{/admin_category_list}">首页</a>
 <a th:href="@{/admin_category_list(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>
 <a th:href="@{/admin_category_list(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>
 <a th:href="@{/admin_category_list(pageNum=${pageInfo.pages})}">尾页</a>
+</div>
 </body>
 </html>

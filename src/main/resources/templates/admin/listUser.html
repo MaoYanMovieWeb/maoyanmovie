@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head th:include="include/admin/adminHeader::html('用户管理')" ></head>
+<head th:include="include/admin/adminHeader::html('用户管理')" >
+
+</head>
 <body>
 <div th:replace="include/admin/adminNavigator::html" ></div>
 <script>
@@ -91,10 +93,13 @@
     </table>
 </form>
 </div>
+<div align="center">
 <p>当前 <span th:text="${pageInfo.pageNum}"></span> 页,总 <span th:text="${pageInfo.pages}"></span> 页,共 <span th:text="${pageInfo.total}"></span> 条记录</p>
 <a th:href="@{/admin_user_list}">首页</a>
 <a th:href="@{/admin_user_list(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>
 <a th:href="@{/admin_user_list(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>
 <a th:href="@{/admin_user_list(pageNum=${pageInfo.pages})}">尾页</a>
+</div>
+
 </body>
 </html>

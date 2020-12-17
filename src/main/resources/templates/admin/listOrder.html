@@ -1,6 +1,4 @@
-<!-- 模仿天猫整站springboot 教程 为how2j.cn 版权所有-->
-<!-- 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关-->
-<!-- 供购买者学习，请勿私自传播，否则自行承担相关法律责任-->
+
 
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
@@ -121,11 +119,13 @@
     </table>
 </form>
 </div>
+<div align="center">
 <p>当前 <span th:text="${pageInfo.pageNum}"></span> 页,总 <span th:text="${pageInfo.pages}"></span> 页,共 <span th:text="${pageInfo.total}"></span> 条记录</p>
 <a th:href="@{/admin_order_list}">首页</a>
 <a th:href="@{/admin_order_list(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>
 <a th:href="@{/admin_order_list(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>
 <a th:href="@{/admin_order_list(pageNum=${pageInfo.pages})}">尾页</a>
+</div>
 </body>
 
 </html>

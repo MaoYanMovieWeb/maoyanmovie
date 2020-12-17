@@ -148,7 +148,7 @@
             </div>
 
             <div class="user">
-                <img th:src="${session.user_photo}==null?'/../img/7dd82a16316ab32c8359debdb04396ef2897.png':${session.user_photo}">
+                <img  class="img-circle" th:src="${session.user_photo}==null?'/../img/7dd82a16316ab32c8359debdb04396ef2897.png':${session.user_photo}">
                 <div class="trian">
                 </div>
                 <div class="login">
@@ -703,6 +703,7 @@
     <div class="cat">
         <a href="#"><img src="../IMG/details_cat.png" alt=""></a>
     </div>
+
 </body>
 
 </html>
