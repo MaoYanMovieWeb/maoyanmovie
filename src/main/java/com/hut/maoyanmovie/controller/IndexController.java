@@ -128,7 +128,7 @@ public class IndexController {
 
     @GetMapping("/admin_order_list")
     public String listOrder(ModelMap modelMap,@RequestParam(defaultValue = "1", value = "pageNum")Integer pageNum){
-        PageHelper.startPage(pageNum, 2);
+        PageHelper.startPage(pageNum, 50);
         List<User> users = userService.selectAll();
         List<Movie> movies = movieService.getAll();
         List<Orders> orders = ordersService.getAll();
